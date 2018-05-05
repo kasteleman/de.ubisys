@@ -1,5 +1,5 @@
 {
-    "id": "ubisys.de",
+    "id": "de.ubisys",
     "sdk": 2,
     "name": {
         "en": "Ubisys SmartHome ZigBee Devices"
@@ -21,36 +21,11 @@
         }
       }
     },
+    "images": {
+      "large": "/assets/images/large.png",
+      "small": "/assets/images/small.png"
+    },
     "drivers": [
-      {
-        "id": "G1",
-        "name": {
-          "en": "Gateway G1",
-          "nl": "Gateway G1"
-        },
-        "class": "other",
-        "capabilities": [
-        ],
-        "images": {
-          "large": "drivers/G1/assets/images/large.png",
-          "small": "drivers/G1/assets/images/small.png"
-        },
-        "zigbee": {
-          "manufacturerName": "ubisys",
-          "productId": "G1",
-          "deviceId": 97,
-          "profileId": 260,
-          "learnmode": {
-            "image": "drivers/G1/assets/learnmode.svg",
-            "instruction": {
-              "en": "Log in on the webinterface of the gateway and configure it to join a existing network",
-              "nl": "Log in op the webinterface van de gateway en configure deze to join a existing network"
-            }
-          }
-        },
-        "settings": [
-        ]
-      },
     {
       "id": "D1_5503",
       "name": {
@@ -95,10 +70,9 @@
         "deviceId": 257,
         "profileId": 260,
         "learnmode": {
-          "image": "drivers/D1_5503/assets/learnmode.svg",
           "instruction": {
-            "en": "Press the button briefly allowing the plug to be visible for the ZigBee network.\n\nWhen the plug is not paired, it will try to join an available network after pressing this button.\n\nPress and hold the button on the side for 5 seconds and release.\n\nAfter you have released the button, the LED will burn solid red for 5 seconds: the pliug has left the network.",
-            "nl": "Druk kort op de knop zodat de plug zichtbaar wordt voor het ZigBee-netwerk.\n\nAls de plug nog niet op een ander netwerk is aangemeld, zal de plug zich nu aanmelden op het beschikbare netwerk.\n\nOm de plug uit een netwerk te verwijderen, druk de knop op de zijkant 5 seconden in en laat los.\n\nDe LED brandt 5 seconden rood om aan te geven dat deze het netwerk verlaat."
+            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n D1 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
+            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n D1 kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
           }
         }
       },
@@ -140,10 +114,9 @@
         "deviceId": 257,
         "profileId": 260,
         "learnmode": {
-          "image": "drivers/D1R_5503/assets/learnmode.svg",
           "instruction": {
-            "en": "Press the button briefly allowing the plug to be visible for the ZigBee network.\n\nWhen the plug is not paired, it will try to join an available network after pressing this button.\n\nPress and hold the button on the side for 5 seconds and release.\n\nAfter you have released the button, the LED will burn solid red for 5 seconds: the pliug has left the network.",
-            "nl": "Druk kort op de knop zodat de plug zichtbaar wordt voor het ZigBee-netwerk.\n\nAls de plug nog niet op een ander netwerk is aangemeld, zal de plug zich nu aanmelden op het beschikbare netwerk.\n\nOm de plug uit een netwerk te verwijderen, druk de knop op de zijkant 5 seconden in en laat los.\n\nDe LED brandt 5 seconden rood om aan te geven dat deze het netwerk verlaat."
+            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n D1-R also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
+            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n D1-R kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
           }
         }
       },
@@ -228,10 +201,9 @@
         "deviceId": 2,
         "profileId": 260,
         "learnmode": {
-          "image": "drivers/S2_5502/assets/learnmode.svg",
           "instruction": {
-            "en": "Press the button briefly allowing the plug to be visible for the ZigBee network.\n\nWhen the plug is not paired, it will try to join an available network after pressing this button.\n\nPress and hold the button on the side for 5 seconds and release.\n\nAfter you have released the button, the LED will burn solid red for 5 seconds: the pliug has left the network.",
-            "nl": "Druk kort op de knop zodat de plug zichtbaar wordt voor het ZigBee-netwerk.\n\nAls de plug nog niet op een ander netwerk is aangemeld, zal de plug zich nu aanmelden op het beschikbare netwerk.\n\nOm de plug uit een netwerk te verwijderen, druk de knop op de zijkant 5 seconden in en laat los.\n\nDe LED brandt 5 seconden rood om aan te geven dat deze het netwerk verlaat."
+            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S2 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
+            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S2 kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
           }
         }
       },
@@ -260,10 +232,9 @@
         "deviceId": 2,
         "profileId": 260,
         "learnmode": {
-          "image": "drivers/S2R_5502/assets/learnmode.svg",
           "instruction": {
-            "en": "Press the button briefly allowing the plug to be visible for the ZigBee network.\n\nWhen the plug is not paired, it will try to join an available network after pressing this button.\n\nPress and hold the button on the side for 5 seconds and release.\n\nAfter you have released the button, the LED will burn solid red for 5 seconds: the pliug has left the network.",
-            "nl": "Druk kort op de knop zodat de plug zichtbaar wordt voor het ZigBee-netwerk.\n\nAls de plug nog niet op een ander netwerk is aangemeld, zal de plug zich nu aanmelden op het beschikbare netwerk.\n\nOm de plug uit een netwerk te verwijderen, druk de knop op de zijkant 5 seconden in en laat los.\n\nDe LED brandt 5 seconden rood om aan te geven dat deze het netwerk verlaat."
+            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S2-R also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
+            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S2-R kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
           }
         }
       },
