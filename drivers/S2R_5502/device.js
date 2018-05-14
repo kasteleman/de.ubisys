@@ -55,17 +55,17 @@ class S2R_5502 extends ZigBeeDevice {
 		// Register conditions for flows
 		this._conditionSwitchTwo = new Homey.FlowCardCondition('switch2_is_on').register()
 			.registerRunListener((args, state) => {
-				return Promise.resolve(this.getCapabilityValue('onoff.1'));
+				return Promise.resolve(args.S2R_5502.getCapabilityValue('onoff.1'));
 			});
 
 		// Register actions for flows
 		this._actionSwitchTwoOn = new Homey.FlowCardAction('turn_on_switch2').register()
 			.registerRunListener((args, state) => {
-				return this.triggerCapabilityListener('onoff.1', true, {});
+				return args.S2R_5502.triggerCapabilityListener('onoff.1', true, {});
 			});
 		this._actionSwitchTwoOff = new Homey.FlowCardAction('turn_off_switch2').register()
 			.registerRunListener((args, state) => {
-				return this.triggerCapabilityListener('onoff.1', false, {});
+				return args.S2R_5502.triggerCapabilityListener('onoff.1', false, {});
 			});
 	}
 
