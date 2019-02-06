@@ -208,6 +208,28 @@
         "dim",
         "measure_power"
       ],
+      "mobile": {
+        "components": [
+          {
+            "id": "icon",
+            "capabilities": [
+              "onoff"
+            ]
+          },
+          {
+            "id": "slider",
+            "capabilities": [
+              "dim"
+            ]
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_power"
+            ]
+          }
+        ]
+      },
       "images": {
         "large": "drivers/D1R_5503/assets/images/large.png",
         "small": "drivers/D1R_5503/assets/images/small.png"
@@ -302,7 +324,7 @@
       "zigbee": {
         "manufacturerName": "ubisys",
         "productId": "S2 (5502)",
-        "deviceId": 2,
+        "deviceId": 266,
         "profileId": 260,
         "learnmode": {
           "instruction": {
@@ -326,14 +348,56 @@
         "onoff.1",
         "measure_power"
       ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "title": {
+            "en": "Switch 1"
+          },
+          "greyout": false
+        },
+        "onoff.1": {
+          "title": {
+            "en": "Switch 2"
+          },
+          "greyout": false
+        }
+      },
+      "mobile": {
+        "components": [
+          {
+            "id": "icon",
+            "capabilities": []
+          },
+          {
+            "id": "toggle",
+            "capabilities": ["onoff"],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "toggle",
+            "capabilities": ["onoff.1"],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_power"
+            ]
+          }
+        ]
+      },
       "images": {
         "large": "drivers/S2R_5502/assets/images/large.png",
         "small": "drivers/S2R_5502/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "ubisys",
-        "productId": "S2-R (5502)",
-        "deviceId": 2,
+        "productId": "S2-R (5602)",
+        "deviceId": 266,
         "profileId": 260,
         "learnmode": {
           "instruction": {
