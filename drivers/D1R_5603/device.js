@@ -2,8 +2,8 @@
 
 const Dimmer = require('../util/dimmer.js');
 
-class D1_5503 extends Dimmer {
+class D1R_5603 extends Dimmer {
 
 }
 
-module.exports = D1_5503;
+module.exports = D1R_5603;

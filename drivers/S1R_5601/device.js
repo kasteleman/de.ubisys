@@ -2,8 +2,8 @@
 
 const Switch = require('../util/switch.js');
 
-class S1_5501 extends Switch {
+class S1R_5601 extends Switch {
 
 }
 
-module.exports = S1_5501;
+module.exports = S1R_5601;

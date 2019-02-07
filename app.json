@@ -8,7 +8,7 @@
         "en": "Support for Ubisys SmartHome ZigBee Devices"
     },
     "category": "lights",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "compatibility": ">=1.5.4",
     "author": {
         "name": "Martin Brasse",
@@ -29,15 +29,10 @@
       {
         "id": "S1_5501",
         "name": {
-          "en": "S1 POWER SWITCH",
-          "nl": "S1 POWER SWITCH"
+          "en": "S1 POWER SWITCH"
         },
-        "class": "light",
         "class": "socket",
-        "capabilities": [
-          "onoff",
-          "measure_power"
-        ],
+        "capabilities": ["onoff", "measure_power"],
         "mobile": {
           "components": [
             {
@@ -53,9 +48,7 @@
             },
             {
               "id": "sensor",
-              "capabilities": [
-                "measure_power"
-              ]
+              "capabilities": ["measure_power"]
             }
           ]
         },
@@ -70,26 +63,19 @@
           "profileId": 260,
           "learnmode": {
             "instruction": {
-              "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S2 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
-              "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S2 kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
+              "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S1 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually."
             }
           }
         },
-        "settings": [
-        ]
+        "settings": []
       },
       {
-        "id": "S1R_5501",
+        "id": "S1R_5601",
         "name": {
-          "en": "S1 RAILSWITCH",
-          "nl": "S1 RAILSWITCH"
+          "en": "S1 RAILSWITCH"
         },
-        "class": "light",
         "class": "socket",
-        "capabilities": [
-          "onoff",
-          "measure_power"
-        ],
+        "capabilities": ["onoff", "measure_power"],
         "mobile": {
           "components": [
             {
@@ -105,62 +91,47 @@
             },
             {
               "id": "sensor",
-              "capabilities": [
-                "measure_power"
-              ]
+              "capabilities": ["measure_power"]
             }
           ]
         },
         "images": {
-          "large": "drivers/S1R_5501/assets/images/large.png",
-          "small": "drivers/S1R_5501/assets/images/small.png"
+          "large": "drivers/S1R_5601/assets/images/large.png",
+          "small": "drivers/S1R_5601/assets/images/small.png"
         },
         "zigbee": {
           "manufacturerName": "ubisys",
-          "productId": "S1-R (5501)",
+          "productId": "S1-R (5601)",
           "deviceId": 9,
           "profileId": 260,
           "learnmode": {
             "instruction": {
-              "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S2 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
-              "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S2 kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
+              "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S1 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually."
             }
           }
         },
-        "settings": [
-        ]
+        "settings": []
       },
     {
       "id": "D1_5503",
       "name": {
-        "en": "D1 DIMMER",
-        "nl": "D1 DIMMER"
+        "en": "D1 DIMMER"
       },
       "class": "socket",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "measure_power"
-      ],
+      "capabilities": ["onoff", "dim", "measure_power"],
       "mobile": {
         "components": [
           {
             "id": "icon",
-            "capabilities": [
-              "onoff"
-            ]
+            "capabilities": ["onoff"]
           },
           {
             "id": "slider",
-            "capabilities": [
-              "dim"
-            ]
+            "capabilities": ["dim"]
           },
           {
             "id": "sensor",
-            "capabilities": [
-              "measure_power"
-            ]
+            "capabilities": ["measure_power"]
           }
         ]
       },
@@ -175,32 +146,16 @@
         "profileId": 260,
         "learnmode": {
           "instruction": {
-            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n D1 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
-            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n D1 kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
+            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n D1 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually."
           }
         }
       },
-      "settings": [
-        {
-          "id": "transtime",
-          "type": "number",
-          "label": {
-            "nl": "Transitie tijd in seconden",
-            "en": "Transition time in seconds"
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 20
-          }
-        }
-      ]
+      "settings": []
     },
     {
-      "id": "D1R_5503",
+      "id": "D1R_5603",
       "name": {
-        "en": "D1-R RAILDIMMER",
-        "nl": "D1-R RAILDIMMER"
+        "en": "D1-R RAILDIMMER"
       },
       "class": "socket",
       "capabilities": [
@@ -212,69 +167,42 @@
         "components": [
           {
             "id": "icon",
-            "capabilities": [
-              "onoff"
-            ]
+            "capabilities": ["onoff"]
           },
           {
             "id": "slider",
-            "capabilities": [
-              "dim"
-            ]
+            "capabilities": ["dim"]
           },
           {
             "id": "sensor",
-            "capabilities": [
-              "measure_power"
-            ]
+            "capabilities": ["measure_power"]
           }
         ]
       },
       "images": {
-        "large": "drivers/D1R_5503/assets/images/large.png",
-        "small": "drivers/D1R_5503/assets/images/small.png"
+        "large": "drivers/D1R_5603/assets/images/large.png",
+        "small": "drivers/D1R_5603/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "ubisys",
-        "productId": "D1-R (5503)",
+        "productId": "D1-R (5603)",
         "deviceId": 257,
         "profileId": 260,
         "learnmode": {
           "instruction": {
-            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n D1-R also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
-            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n D1-R kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
+            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n D1-R also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually."
           }
         }
       },
-      "settings": [
-        {
-          "id": "transtime",
-          "type": "number",
-          "label": {
-            "nl": "Transitie tijd in seconden",
-            "en": "Transition time in seconds"
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 20
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "S2_5502",
       "name": {
-        "en": "S2 POWER SWITCH",
-        "nl": "S2 POWER SWITCH"
+        "en": "S2 POWER SWITCH"
       },
-      "class": "light",
       "class": "socket",
-      "capabilities": [
-        "onoff",
-        "onoff.1",
-        "measure_power"
-      ],
+      "capabilities": ["onoff", "onoff.1", "measure_power"],
       "capabilitiesOptions": {
         "onoff": {
           "title": {
@@ -311,9 +239,7 @@
           },
           {
             "id": "sensor",
-            "capabilities": [
-              "measure_power"
-            ]
+            "capabilities": ["measure_power"]
           }
         ]
       },
@@ -328,26 +254,19 @@
         "profileId": 260,
         "learnmode": {
           "instruction": {
-            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S2 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
-            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S2 kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
+            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S2 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually."
           }
         }
       },
-      "settings": [
-      ]
+      "settings": []
     },
     {
-      "id": "S2R_5502",
+      "id": "S2R_5602",
       "name": {
-        "en": "S2 RAILSWITCH",
-        "nl": "S2 RAILSWITCH"
+        "en": "S2 RAILSWITCH"
       },
       "class": "socket",
-      "capabilities": [
-        "onoff",
-        "onoff.1",
-        "measure_power"
-      ],
+      "capabilities": ["onoff", "onoff.1", "measure_power"],
       "capabilitiesOptions": {
         "onoff": {
           "title": {
@@ -384,15 +303,13 @@
           },
           {
             "id": "sensor",
-            "capabilities": [
-              "measure_power"
-            ]
+            "capabilities": ["measure_power"]
           }
         ]
       },
       "images": {
-        "large": "drivers/S2R_5502/assets/images/large.png",
-        "small": "drivers/S2R_5502/assets/images/small.png"
+        "large": "drivers/S2R_5602/assets/images/large.png",
+        "small": "drivers/S2R_5602/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "ubisys",
@@ -401,13 +318,11 @@
         "profileId": 260,
         "learnmode": {
           "instruction": {
-            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S2-R also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
-            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S2-R kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
+            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S2-R also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually."
           }
         }
       },
-      "settings": [
-      ]
+      "settings": []
     }
   ],
   "flow": {
@@ -415,28 +330,26 @@
       {
       "id": "switch2_turned_on",
       "title": {
-        "en": "Second Switch Turned On",
-        "nl": "2. Schakelaar Aangezet"
+        "en": "Second Switch Turned On"
       },
       "args": [
         {
           "type": "device",
           "name": "device",
-          "filter": "driver_id=S2_5502||S2R_5502"
+          "filter": "driver_id=S2_5502||S2R_5602"
         }
       ]
     },
     {
       "id": "switch2_turned_off",
       "title": {
-        "en": "Second Switch Turned Off",
-        "nl": "2. Schakelaar Uitgezet"
+        "en": "Second Switch Turned Off"
       },
       "args": [
         {
           "type": "device",
           "name": "device",
-          "filter": "driver_id=S2_5502||S2R_5502"
+          "filter": "driver_id=S2_5502||S2R_5602"
         }
       ]
     }
@@ -445,14 +358,13 @@
     {
       "id": "switch2_is_on",
       "title": {
-        "en": "Second switch is !{{on|off}}",
-        "nl": "2. schakelaar is !{{ingeschakeld|uitgeschakeld}}"
+        "en": "Second switch is !{{on|off}}"
       },
       "args": [
         {
           "type": "device",
           "name": "device",
-          "filter": "driver_id=S2_5502||S2R_5502"
+          "filter": "driver_id=S2_5502||S2R_5602"
         }
       ]
     }
@@ -461,28 +373,26 @@
       {
       "id": "turn_on_switch2",
       "title": {
-        "en": "Turn Second Switch On",
-        "nl": "Zet 2. Schakelaar aan"
+        "en": "Turn Second Switch On"
      },
     "args": [
       {
         "type": "device",
         "name": "device",
-        "filter": "driver_id=S2_5502||S2R_5502"
+        "filter": "driver_id=S2_5502||S2R_5602"
       }
     ]
   },
   {
     "id": "turn_off_switch2",
     "title": {
-      "en": "Turn Second Switch Off",
-      "nl": "Zet 2. Schakelaar uit"
+      "en": "Turn Second Switch Off"
     },
     "args": [
       {
         "type": "device",
         "name": "device",
-        "filter": "driver_id=S2_5502||S2R_5502"
+        "filter": "driver_id=S2_5502||S2R_5602"
       }
     ]
   }
