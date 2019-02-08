@@ -27,7 +27,7 @@ class Dimmer extends Core {
 		this.setCapabilityValue('dim', parsedValue);
 	}
 
-	//If transtime is changed then write back to zigbee device
+	//If transtime or min_dim_level is changed then write back to zigbee device
 	async onSettings(oldSettings, newSettings, changedKeysArr) {
 		if (changedKeysArr.indexOf("transtime") > -1) {
 			this.log('Transtime value was change to:', newSettings.transtime);
@@ -47,10 +47,10 @@ class Dimmer extends Core {
 
 			this.node.endpoints[0].clusters['lightingBallastCfg'].write("minLevel", (newSettings.min_dim_level))
 			  .then(result => {
-					//this.log('onOffTransitionTime return value:', result);
+					//this.log('minLevel return value:', result);
 			  })
 			  .catch(err => {
-					this.error('failed to set onOffTransitionTime', err);
+					this.error('failed to set minLevel', err);
 			  });
 		}
 	}
