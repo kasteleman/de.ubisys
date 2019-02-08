@@ -14,6 +14,14 @@
         "name": "Martin Brasse",
         "email": "kasteleman@gmail.com"
     },
+    "contributors": {
+      "developers": [
+          {
+              "name": "Richard Barkestam",
+              "email": "richard@barkestam.se"
+          }
+      ]
+    },
     "contributing": {
       "donate": {
         "paypal": {
@@ -28,16 +36,19 @@
     "drivers": [
       {
         "id": "S1_5501",
+        "class": "socket",
+        "capabilities": ["onoff", "measure_power"],
         "name": {
           "en": "S1 POWER SWITCH"
         },
-        "class": "socket",
-        "capabilities": ["onoff", "measure_power"],
+        "images": {
+          "large": "drivers/S1_5501/assets/images/large.png",
+          "small": "drivers/S1_5501/assets/images/small.png"
+        },
         "mobile": {
           "components": [
             {
-              "id": "icon",
-              "capabilities": []
+              "id": "icon"
             },
             {
               "id": "toggle",
@@ -51,10 +62,6 @@
               "capabilities": ["measure_power"]
             }
           ]
-        },
-        "images": {
-          "large": "drivers/S1_5501/assets/images/large.png",
-          "small": "drivers/S1_5501/assets/images/small.png"
         },
         "zigbee": {
           "manufacturerName": "ubisys",
@@ -67,20 +74,48 @@
             }
           }
         },
-        "settings": []
+        "settings": [
+          {
+            "type": "group",
+            "label": {
+              "en": "Information"
+            },
+            "children": [
+              {
+                "id": "dateCode",
+                "type": "text",
+                "label": {
+                  "en": "Manufactured"
+                },
+                "value": ""
+              },
+              {
+                "id": "hwVersion",
+                "type": "number",
+                "label": {
+                  "en": "Hardware version"
+                },
+                "value": 0
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "S1R_5601",
+        "class": "socket",
+        "capabilities": ["onoff", "measure_power"],
         "name": {
           "en": "S1 RAILSWITCH"
         },
-        "class": "socket",
-        "capabilities": ["onoff", "measure_power"],
+        "images": {
+          "large": "drivers/S1R_5601/assets/images/large.png",
+          "small": "drivers/S1R_5601/assets/images/small.png"
+        },
         "mobile": {
           "components": [
             {
-              "id": "icon",
-              "capabilities": []
+              "id": "icon"
             },
             {
               "id": "toggle",
@@ -95,10 +130,6 @@
             }
           ]
         },
-        "images": {
-          "large": "drivers/S1R_5601/assets/images/large.png",
-          "small": "drivers/S1R_5601/assets/images/small.png"
-        },
         "zigbee": {
           "manufacturerName": "ubisys",
           "productId": "S1-R (5601)",
@@ -110,15 +141,44 @@
             }
           }
         },
-        "settings": []
+        "settings": [
+          {
+            "type": "group",
+            "label": {
+              "en": "Information"
+            },
+            "children": [
+              {
+                "id": "dateCode",
+                "type": "text",
+                "label": {
+                  "en": "Manufactured"
+                },
+                "value": ""
+              },
+              {
+                "id": "hwVersion",
+                "type": "number",
+                "label": {
+                  "en": "Hardware version"
+                },
+                "value": 0
+              }
+            ]
+          }
+        ]
       },
     {
       "id": "D1_5503",
+      "class": "light",
+      "capabilities": ["onoff", "dim", "measure_power"],
       "name": {
         "en": "D1 DIMMER"
       },
-      "class": "socket",
-      "capabilities": ["onoff", "dim", "measure_power"],
+      "images": {
+        "large": "drivers/D1_5503/assets/images/large.png",
+        "small": "drivers/D1_5503/assets/images/small.png"
+      },
       "mobile": {
         "components": [
           {
@@ -134,10 +194,6 @@
             "capabilities": ["measure_power"]
           }
         ]
-      },
-      "images": {
-        "large": "drivers/D1_5503/assets/images/large.png",
-        "small": "drivers/D1_5503/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "ubisys",
@@ -150,19 +206,54 @@
           }
         }
       },
-      "settings": []
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Information"
+          },
+          "children": [
+            {
+              "id": "dateCode",
+              "type": "text",
+              "label": {
+                "en": "Manufactured"
+              },
+              "value": ""
+            },
+            {
+              "id": "hwVersion",
+              "type": "number",
+              "label": {
+                "en": "Hardware version"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": "transtime",
+          "type": "number",
+          "label": {
+            "en": "Transition time in seconds"
+          },
+          "value": 1,
+          "min": 0,
+          "max": 3
+        }
+      ]
     },
     {
       "id": "D1R_5603",
+      "class": "light",
+      "capabilities": ["onoff", "dim", "measure_power"],
       "name": {
         "en": "D1-R RAILDIMMER"
       },
-      "class": "socket",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "measure_power"
-      ],
+      "images": {
+        "large": "drivers/D1R_5603/assets/images/large.png",
+        "small": "drivers/D1R_5603/assets/images/small.png"
+      },
       "mobile": {
         "components": [
           {
@@ -179,10 +270,6 @@
           }
         ]
       },
-      "images": {
-        "large": "drivers/D1R_5603/assets/images/large.png",
-        "small": "drivers/D1R_5603/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": "ubisys",
         "productId": "D1-R (5603)",
@@ -194,13 +281,45 @@
           }
         }
       },
-      "settings": []
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Information"
+          },
+          "children": [
+            {
+              "id": "dateCode",
+              "type": "text",
+              "label": {
+                "en": "Manufactured"
+              },
+              "value": ""
+            },
+            {
+              "id": "hwVersion",
+              "type": "number",
+              "label": {
+                "en": "Hardware version"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": "transtime",
+          "type": "number",
+          "label": {
+            "en": "Transition time in seconds"
+          },
+          "value": 1,
+          "min": 0,
+          "max": 3
+        }
+      ]
     },
     {
       "id": "S2_5502",
-      "name": {
-        "en": "S2 POWER SWITCH"
-      },
       "class": "socket",
       "capabilities": ["onoff", "onoff.1", "measure_power"],
       "capabilitiesOptions": {
@@ -217,11 +336,17 @@
           "greyout": false
         }
       },
+      "name": {
+        "en": "S2 POWER SWITCH"
+      },
+      "images": {
+        "large": "drivers/S2_5502/assets/images/large.png",
+        "small": "drivers/S2_5502/assets/images/small.png"
+      },
       "mobile": {
         "components": [
           {
-            "id": "icon",
-            "capabilities": []
+            "id": "icon"
           },
           {
             "id": "toggle",
@@ -242,10 +367,6 @@
             "capabilities": ["measure_power"]
           }
         ]
-      },
-      "images": {
-        "large": "drivers/S2_5502/assets/images/large.png",
-        "small": "drivers/S2_5502/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "ubisys",
@@ -258,13 +379,35 @@
           }
         }
       },
-      "settings": []
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Information"
+          },
+          "children": [
+            {
+              "id": "dateCode",
+              "type": "text",
+              "label": {
+                "en": "Manufactured"
+              },
+              "value": ""
+            },
+            {
+              "id": "hwVersion",
+              "type": "number",
+              "label": {
+                "en": "Hardware version"
+              },
+              "value": 0
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "S2R_5602",
-      "name": {
-        "en": "S2 RAILSWITCH"
-      },
       "class": "socket",
       "capabilities": ["onoff", "onoff.1", "measure_power"],
       "capabilitiesOptions": {
@@ -281,11 +424,17 @@
           "greyout": false
         }
       },
+      "name": {
+        "en": "S2 RAILSWITCH"
+      },
+      "images": {
+        "large": "drivers/S2R_5602/assets/images/large.png",
+        "small": "drivers/S2R_5602/assets/images/small.png"
+      },
       "mobile": {
         "components": [
           {
-            "id": "icon",
-            "capabilities": []
+            "id": "icon"
           },
           {
             "id": "toggle",
@@ -307,10 +456,6 @@
           }
         ]
       },
-      "images": {
-        "large": "drivers/S2R_5602/assets/images/large.png",
-        "small": "drivers/S2R_5602/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": "ubisys",
         "productId": "S2-R (5602)",
@@ -322,7 +467,32 @@
           }
         }
       },
-      "settings": []
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Information"
+          },
+          "children": [
+            {
+              "id": "dateCode",
+              "type": "text",
+              "label": {
+                "en": "Manufactured"
+              },
+              "value": ""
+            },
+            {
+              "id": "hwVersion",
+              "type": "number",
+              "label": {
+                "en": "Hardware version"
+              },
+              "value": 0
+            }
+          ]
+        }
+      ]
     }
   ],
   "flow": {
