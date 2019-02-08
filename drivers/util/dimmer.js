@@ -41,6 +41,18 @@ class Dimmer extends Core {
 					this.error('failed to set onOffTransitionTime', err);
 			  });
 		}
+
+		if (changedKeysArr.indexOf("min_dim_level") > -1) {
+			this.log('Min dim level value was change to:', newSettings.min_dim_level);
+
+			this.node.endpoints[0].clusters['lightingBallastCfg'].write("minLevel", (newSettings.min_dim_level))
+			  .then(result => {
+					//this.log('onOffTransitionTime return value:', result);
+			  })
+			  .catch(err => {
+					this.error('failed to set onOffTransitionTime', err);
+			  });
+		}
 	}
 }
 
