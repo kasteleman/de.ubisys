@@ -13,7 +13,7 @@ Fixed flows for S2 and S2-R
 
 # 1.0.2
 
-Added support for Homey v2.0
+Added support for Homey v2.0.
 Added support for D1 and D1-R transition time.
-Added device specific information on advanced settings tab; Manufactured and Hardware version
-Fixed trigger support for S2 and S2-R
+Added device specific information on advanced settings tab; Manufactured and Hardware version.
+Fixed trigger support for S2 and S2-R.
