@@ -5,6 +5,14 @@ const ZigBeeDevice = require('homey-meshdriver').ZigBeeDevice;
 
 class Core extends ZigBeeDevice {
 
+	onAdded() {
+		this.log('Adding device to Homey.');
+	}
+
+	onDeleted() {
+		this.log('Deleting device from Homey.');
+	}
+
 	initCore() {
 		//Property seems to be required for measure_power in seMetering.js
     this.instantaneousDemandFactor = 1;
@@ -52,7 +60,7 @@ class Core extends ZigBeeDevice {
 					//this.log('hwVersion:', result);
 					this.setSettings({hwVersion: result})
 						.catch(err => {
-							this.error('failed to update dateCode settings', err);
+							this.error('failed to update hwVersion settings', err);
 						});
 				})
 				.catch(err => {

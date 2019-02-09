@@ -6,11 +6,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ricott/de.ubisys.git"
+    "url": "git+https://github.com/kasteleman/de.ubisys.git"
   },
-  "author": "Richard Barkestam",
   "license": "ISC",
-  "homepage": "https://github.com/ricott/de.ubisys",
+  "homepage": "https://github.com/kasteleman/de.ubisys",
   "dependencies": {
     "homey-log": "^1.0.6",
     "homey-meshdriver": "^1.2.30"
