@@ -9,7 +9,7 @@
     },
     "category": "lights",
     "version": "1.0.2",
-    "compatibility": ">=2.0.0",
+    "compatibility": ">=1.5.4",
     "author": {
         "name": "Martin Brasse",
         "email": "kasteleman@gmail.com"
@@ -103,15 +103,15 @@
         ]
       },
       {
-        "id": "S1R_5601",
+        "id": "S1R_5501",
         "class": "socket",
         "capabilities": ["onoff", "measure_power"],
         "name": {
           "en": "S1 RAILSWITCH"
         },
         "images": {
-          "large": "drivers/S1R_5601/assets/images/large.png",
-          "small": "drivers/S1R_5601/assets/images/small.png"
+          "large": "drivers/S1R_5501/assets/images/large.png",
+          "small": "drivers/S1R_5501/assets/images/small.png"
         },
         "mobile": {
           "components": [
@@ -258,15 +258,15 @@
       ]
     },
     {
-      "id": "D1R_5603",
+      "id": "D1R_5503",
       "class": "light",
       "capabilities": ["onoff", "dim", "measure_power"],
       "name": {
         "en": "D1-R RAILDIMMER"
       },
       "images": {
-        "large": "drivers/D1R_5603/assets/images/large.png",
-        "small": "drivers/D1R_5603/assets/images/small.png"
+        "large": "drivers/D1R_5503/assets/images/large.png",
+        "small": "drivers/D1R_5503/assets/images/small.png"
       },
       "mobile": {
         "components": [
@@ -434,7 +434,7 @@
       ]
     },
     {
-      "id": "S2R_5602",
+      "id": "S2R_5502",
       "class": "socket",
       "capabilities": ["onoff", "onoff.1", "measure_power"],
       "capabilitiesOptions": {
@@ -455,8 +455,8 @@
         "en": "S2 RAILSWITCH"
       },
       "images": {
-        "large": "drivers/S2R_5602/assets/images/large.png",
-        "small": "drivers/S2R_5602/assets/images/small.png"
+        "large": "drivers/S2R_5502/assets/images/large.png",
+        "small": "drivers/S2R_5502/assets/images/small.png"
       },
       "mobile": {
         "components": [
@@ -535,7 +535,7 @@
         {
           "type": "device",
           "name": "device",
-          "filter": "driver_id=S2_5502||S2R_5602"
+          "filter": "driver_id=S2_5502||S2R_5502"
         }
       ]
     },
@@ -549,7 +549,7 @@
         {
           "type": "device",
           "name": "device",
-          "filter": "driver_id=S2_5502||S2R_5602"
+          "filter": "driver_id=S2_5502||S2R_5502"
         }
       ]
     }
@@ -565,7 +565,7 @@
         {
           "type": "device",
           "name": "device",
-          "filter": "driver_id=S2_5502||S2R_5602"
+          "filter": "driver_id=S2_5502||S2R_5502"
         }
       ]
     }
@@ -581,7 +581,7 @@
       {
         "type": "device",
         "name": "device",
-        "filter": "driver_id=S2_5502||S2R_5602"
+        "filter": "driver_id=S2_5502||S2R_5502"
       }
     ]
   },
@@ -595,7 +595,7 @@
       {
         "type": "device",
         "name": "device",
-        "filter": "driver_id=S2_5502||S2R_5602"
+        "filter": "driver_id=S2_5502||S2R_5502"
       }
     ]
   }
