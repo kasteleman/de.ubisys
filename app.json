@@ -8,11 +8,19 @@
         "en": "Support for Ubisys SmartHome ZigBee Devices"
     },
     "category": "lights",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "compatibility": ">=1.5.4",
     "author": {
         "name": "Martin Brasse",
         "email": "kasteleman@gmail.com"
+    },
+    "contributors": {
+      "developers": [
+          {
+              "name": "Richard Barkestam",
+              "email": "richard@barkestam.se"
+          }
+      ]
     },
     "contributing": {
       "donate": {
@@ -28,21 +36,19 @@
     "drivers": [
       {
         "id": "S1_5501",
-        "name": {
-          "en": "S1 POWER SWITCH",
-          "nl": "S1 POWER SWITCH"
-        },
-        "class": "light",
         "class": "socket",
-        "capabilities": [
-          "onoff",
-          "measure_power"
-        ],
+        "capabilities": ["onoff", "measure_power"],
+        "name": {
+          "en": "S1 POWER SWITCH"
+        },
+        "images": {
+          "large": "drivers/S1_5501/assets/images/large.png",
+          "small": "drivers/S1_5501/assets/images/small.png"
+        },
         "mobile": {
           "components": [
             {
-              "id": "icon",
-              "capabilities": []
+              "id": "icon"
             },
             {
               "id": "toggle",
@@ -53,15 +59,9 @@
             },
             {
               "id": "sensor",
-              "capabilities": [
-                "measure_power"
-              ]
+              "capabilities": ["measure_power"]
             }
           ]
-        },
-        "images": {
-          "large": "drivers/S1_5501/assets/images/large.png",
-          "small": "drivers/S1_5501/assets/images/small.png"
         },
         "zigbee": {
           "manufacturerName": "ubisys",
@@ -70,31 +70,53 @@
           "profileId": 260,
           "learnmode": {
             "instruction": {
-              "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S2 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
+              "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S1 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
               "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S2 kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
             }
           }
         },
         "settings": [
+          {
+            "type": "group",
+            "label": {
+              "en": "Information"
+            },
+            "children": [
+              {
+                "id": "dateCode",
+                "type": "text",
+                "label": {
+                  "en": "Manufactured"
+                },
+                "value": ""
+              },
+              {
+                "id": "hwVersion",
+                "type": "number",
+                "label": {
+                  "en": "Hardware version"
+                },
+                "value": 0
+              }
+            ]
+          }
         ]
       },
       {
         "id": "S1R_5501",
-        "name": {
-          "en": "S1 RAILSWITCH",
-          "nl": "S1 RAILSWITCH"
-        },
-        "class": "light",
         "class": "socket",
-        "capabilities": [
-          "onoff",
-          "measure_power"
-        ],
+        "capabilities": ["onoff", "measure_power"],
+        "name": {
+          "en": "S1 RAILSWITCH"
+        },
+        "images": {
+          "large": "drivers/S1R_5501/assets/images/large.png",
+          "small": "drivers/S1R_5501/assets/images/small.png"
+        },
         "mobile": {
           "components": [
             {
-              "id": "icon",
-              "capabilities": []
+              "id": "icon"
             },
             {
               "id": "toggle",
@@ -105,68 +127,75 @@
             },
             {
               "id": "sensor",
-              "capabilities": [
-                "measure_power"
-              ]
+              "capabilities": ["measure_power"]
             }
           ]
         },
-        "images": {
-          "large": "drivers/S1R_5501/assets/images/large.png",
-          "small": "drivers/S1R_5501/assets/images/small.png"
-        },
         "zigbee": {
           "manufacturerName": "ubisys",
-          "productId": "S1-R (5501)",
+          "productId": "S1-R (5601)",
           "deviceId": 9,
           "profileId": 260,
           "learnmode": {
             "instruction": {
-              "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S2 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
+              "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S1 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
               "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S2 kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
             }
           }
         },
         "settings": [
-        ]
-      },
-    {
-      "id": "D1_5503",
-      "name": {
-        "en": "D1 DIMMER",
-        "nl": "D1 DIMMER"
-      },
-      "class": "socket",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "measure_power"
-      ],
-      "mobile": {
-        "components": [
           {
-            "id": "icon",
-            "capabilities": [
-              "onoff"
-            ]
-          },
-          {
-            "id": "slider",
-            "capabilities": [
-              "dim"
-            ]
-          },
-          {
-            "id": "sensor",
-            "capabilities": [
-              "measure_power"
+            "type": "group",
+            "label": {
+              "en": "Information"
+            },
+            "children": [
+              {
+                "id": "dateCode",
+                "type": "text",
+                "label": {
+                  "en": "Manufactured"
+                },
+                "value": ""
+              },
+              {
+                "id": "hwVersion",
+                "type": "number",
+                "label": {
+                  "en": "Hardware version"
+                },
+                "value": 0
+              }
             ]
           }
         ]
       },
+    {
+      "id": "D1_5503",
+      "class": "light",
+      "capabilities": ["onoff", "dim", "measure_power"],
+      "name": {
+        "en": "D1 DIMMER"
+      },
       "images": {
         "large": "drivers/D1_5503/assets/images/large.png",
         "small": "drivers/D1_5503/assets/images/small.png"
+      },
+      "mobile": {
+        "components": [
+          {
+            "id": "icon",
+            "capabilities": ["onoff"]
+          },
+          {
+            "id": "slider",
+            "capabilities": ["dim"]
+          },
+          {
+            "id": "sensor",
+            "capabilities": ["measure_power"]
+          }
+        ]
       },
       "zigbee": {
         "manufacturerName": "ubisys",
@@ -182,39 +211,82 @@
       },
       "settings": [
         {
+          "type": "group",
+          "label": {
+            "en": "Information"
+          },
+          "children": [
+            {
+              "id": "dateCode",
+              "type": "text",
+              "label": {
+                "en": "Manufactured"
+              },
+              "value": ""
+            },
+            {
+              "id": "hwVersion",
+              "type": "number",
+              "label": {
+                "en": "Hardware version"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
           "id": "transtime",
           "type": "number",
           "label": {
-            "nl": "Transitie tijd in seconden",
-            "en": "Transition time in seconds"
+            "en": "Transition time in seconds",
+            "nl": "Transitie tijd in seconden"
           },
           "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 20
-          }
+          "min": 0,
+          "max": 3
+        },
+        {
+          "id": "min_dim_level",
+          "type": "number",
+          "label": {
+            "en": "Minimum dimming level"
+          },
+          "value": 1,
+          "min": 1,
+          "max": 10
         }
       ]
     },
     {
       "id": "D1R_5503",
+      "class": "light",
+      "capabilities": ["onoff", "dim", "measure_power"],
       "name": {
-        "en": "D1-R RAILDIMMER",
-        "nl": "D1-R RAILDIMMER"
+        "en": "D1-R RAILDIMMER"
       },
-      "class": "socket",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "measure_power"
-      ],
       "images": {
         "large": "drivers/D1R_5503/assets/images/large.png",
         "small": "drivers/D1R_5503/assets/images/small.png"
       },
+      "mobile": {
+        "components": [
+          {
+            "id": "icon",
+            "capabilities": ["onoff"]
+          },
+          {
+            "id": "slider",
+            "capabilities": ["dim"]
+          },
+          {
+            "id": "sensor",
+            "capabilities": ["measure_power"]
+          }
+        ]
+      },
       "zigbee": {
         "manufacturerName": "ubisys",
-        "productId": "D1-R (5503)",
+        "productId": "D1-R (5603)",
         "deviceId": 257,
         "profileId": 260,
         "learnmode": {
@@ -226,33 +298,56 @@
       },
       "settings": [
         {
+          "type": "group",
+          "label": {
+            "en": "Information"
+          },
+          "children": [
+            {
+              "id": "dateCode",
+              "type": "text",
+              "label": {
+                "en": "Manufactured"
+              },
+              "value": ""
+            },
+            {
+              "id": "hwVersion",
+              "type": "number",
+              "label": {
+                "en": "Hardware version"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
           "id": "transtime",
           "type": "number",
           "label": {
-            "nl": "Transitie tijd in seconden",
-            "en": "Transition time in seconds"
+            "en": "Transition time in seconds",
+            "nl": "Transitie tijd in seconden"
           },
           "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 20
-          }
+          "min": 0,
+          "max": 3
+        },
+        {
+          "id": "min_dim_level",
+          "type": "number",
+          "label": {
+            "en": "Minimum dimming level"
+          },
+          "value": 1,
+          "min": 1,
+          "max": 10
         }
       ]
     },
     {
       "id": "S2_5502",
-      "name": {
-        "en": "S2 POWER SWITCH",
-        "nl": "S2 POWER SWITCH"
-      },
-      "class": "light",
       "class": "socket",
-      "capabilities": [
-        "onoff",
-        "onoff.1",
-        "measure_power"
-      ],
+      "capabilities": ["onoff", "onoff.1", "measure_power"],
       "capabilitiesOptions": {
         "onoff": {
           "title": {
@@ -267,11 +362,17 @@
           "greyout": false
         }
       },
+      "name": {
+        "en": "S2 POWER SWITCH"
+      },
+      "images": {
+        "large": "drivers/S2_5502/assets/images/large.png",
+        "small": "drivers/S2_5502/assets/images/small.png"
+      },
       "mobile": {
         "components": [
           {
-            "id": "icon",
-            "capabilities": []
+            "id": "icon"
           },
           {
             "id": "toggle",
@@ -289,20 +390,14 @@
           },
           {
             "id": "sensor",
-            "capabilities": [
-              "measure_power"
-            ]
+            "capabilities": ["measure_power"]
           }
         ]
-      },
-      "images": {
-        "large": "drivers/S2_5502/assets/images/large.png",
-        "small": "drivers/S2_5502/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "ubisys",
         "productId": "S2 (5502)",
-        "deviceId": 2,
+        "deviceId": 266,
         "profileId": 260,
         "learnmode": {
           "instruction": {
@@ -312,28 +407,86 @@
         }
       },
       "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Information"
+          },
+          "children": [
+            {
+              "id": "dateCode",
+              "type": "text",
+              "label": {
+                "en": "Manufactured"
+              },
+              "value": ""
+            },
+            {
+              "id": "hwVersion",
+              "type": "number",
+              "label": {
+                "en": "Hardware version"
+              },
+              "value": 0
+            }
+          ]
+        }
       ]
     },
     {
       "id": "S2R_5502",
-      "name": {
-        "en": "S2 RAILSWITCH",
-        "nl": "S2 RAILSWITCH"
-      },
       "class": "socket",
-      "capabilities": [
-        "onoff",
-        "onoff.1",
-        "measure_power"
-      ],
+      "capabilities": ["onoff", "onoff.1", "measure_power"],
+      "capabilitiesOptions": {
+        "onoff": {
+          "title": {
+            "en": "Switch 1"
+          },
+          "greyout": false
+        },
+        "onoff.1": {
+          "title": {
+            "en": "Switch 2"
+          },
+          "greyout": false
+        }
+      },
+      "name": {
+        "en": "S2 RAILSWITCH"
+      },
       "images": {
         "large": "drivers/S2R_5502/assets/images/large.png",
         "small": "drivers/S2R_5502/assets/images/small.png"
       },
+      "mobile": {
+        "components": [
+          {
+            "id": "icon"
+          },
+          {
+            "id": "toggle",
+            "capabilities": ["onoff"],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "toggle",
+            "capabilities": ["onoff.1"],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "sensor",
+            "capabilities": ["measure_power"]
+          }
+        ]
+      },
       "zigbee": {
         "manufacturerName": "ubisys",
-        "productId": "S2-R (5502)",
-        "deviceId": 2,
+        "productId": "S2-R (5602)",
+        "deviceId": 266,
         "profileId": 260,
         "learnmode": {
           "instruction": {
@@ -343,6 +496,30 @@
         }
       },
       "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Information"
+          },
+          "children": [
+            {
+              "id": "dateCode",
+              "type": "text",
+              "label": {
+                "en": "Manufactured"
+              },
+              "value": ""
+            },
+            {
+              "id": "hwVersion",
+              "type": "number",
+              "label": {
+                "en": "Hardware version"
+              },
+              "value": 0
+            }
+          ]
+        }
       ]
     }
   ],

@@ -6,7 +6,7 @@ class Ubisys extends Homey.App {
 
 	onInit() {
 
-		this.log('Ubisys SmartHome ZigBee Devices is running...');
+		this.log('Ubisys SmartHome ZigBee Devices are running...');
 
 	}
 
