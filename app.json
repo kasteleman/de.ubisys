@@ -84,7 +84,7 @@
             "children": [
               {
                 "id": "dateCode",
-                "type": "label",
+                "type": "text",
                 "label": {
                   "en": "Manufactured"
                 },
@@ -92,7 +92,7 @@
               },
               {
                 "id": "hwVersion",
-                "type": "label",
+                "type": "number",
                 "label": {
                   "en": "Hardware version"
                 },
@@ -152,7 +152,7 @@
             "children": [
               {
                 "id": "dateCode",
-                "type": "label",
+                "type": "text",
                 "label": {
                   "en": "Manufactured"
                 },
@@ -160,7 +160,7 @@
               },
               {
                 "id": "hwVersion",
-                "type": "label",
+                "type": "number",
                 "label": {
                   "en": "Hardware version"
                 },
@@ -218,7 +218,7 @@
           "children": [
             {
               "id": "dateCode",
-              "type": "label",
+              "type": "text",
               "label": {
                 "en": "Manufactured"
               },
@@ -226,7 +226,7 @@
             },
             {
               "id": "hwVersion",
-              "type": "label",
+              "type": "number",
               "label": {
                 "en": "Hardware version"
               },
@@ -305,7 +305,7 @@
           "children": [
             {
               "id": "dateCode",
-              "type": "label",
+              "type": "text",
               "label": {
                 "en": "Manufactured"
               },
@@ -313,7 +313,7 @@
             },
             {
               "id": "hwVersion",
-              "type": "label",
+              "type": "number",
               "label": {
                 "en": "Hardware version"
               },
@@ -415,7 +415,7 @@
           "children": [
             {
               "id": "dateCode",
-              "type": "label",
+              "type": "text",
               "label": {
                 "en": "Manufactured"
               },
@@ -423,7 +423,7 @@
             },
             {
               "id": "hwVersion",
-              "type": "label",
+              "type": "number",
               "label": {
                 "en": "Hardware version"
               },
@@ -504,7 +504,7 @@
           "children": [
             {
               "id": "dateCode",
-              "type": "label",
+              "type": "text",
               "label": {
                 "en": "Manufactured"
               },
@@ -512,7 +512,7 @@
             },
             {
               "id": "hwVersion",
-              "type": "label",
+              "type": "number",
               "label": {
                 "en": "Hardware version"
               },
