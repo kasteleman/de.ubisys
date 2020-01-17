@@ -14,10 +14,10 @@ class Switch2 extends Core {
 		//Switch 2
 		this.registerCapability('onoff.1', 'genOnOff', { endpoint: 1 });
 		this.registerAttrReportListener('genOnOff', 'onOff', 1, 0, null,
-      this.onOffSwitch2Report.bind(this), 1)
-        .catch(err => {
-          this.error('failed to register attr report listener - genOnOff/onOff.1', err);
-        });
+			this.onOffSwitch2Report.bind(this), 1)
+			.catch(err => {
+				this.error('failed to register attr report listener - genOnOff/onOff.1', err);
+			});
 
 		this._triggerSwitchTwoOn = new Homey.FlowCardTriggerDevice('switch2_turned_on').register();
 		this._triggerSwitchTwoOff = new Homey.FlowCardTriggerDevice('switch2_turned_off').register();
@@ -42,7 +42,7 @@ class Switch2 extends Core {
 	onOffSwitch2Report(value) {
 		const parsedValue = (value === 1);
 		this.log('Switch2, genOnOff.1', value, parsedValue);
-    this.setCapabilityValue('onoff.1', parsedValue);
+		this.setCapabilityValue('onoff.1', parsedValue);
 		this.log('Firing switch2 trigger ', parsedValue ? 'On' : 'Off');
 		if (parsedValue) {
 			this._triggerSwitchTwoOn.trigger(this, {}, {}).catch(this.error);

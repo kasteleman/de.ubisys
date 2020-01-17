@@ -13,11 +13,11 @@ class Dimmer extends Core {
 
 		if (this.hasCapability('dim')) {
 			this.registerCapability('dim', 'genLevelCtrl', { endpoint: 0 });
-      this.registerAttrReportListener('genLevelCtrl', 'currentLevel', 1, 0, 2,
-  			this.onDimLevelReport.bind(this), 0)
-  				.catch(err => {
-  					this.error('failed to register attr report listener - genLevelCtrl/currentLevel', err);
-  				});
+			this.registerAttrReportListener('genLevelCtrl', 'currentLevel', 1, 0, 2,
+				this.onDimLevelReport.bind(this), 0)
+				.catch(err => {
+					this.error('failed to register attr report listener - genLevelCtrl/currentLevel', err);
+				});
 		}
 	}
 
@@ -33,25 +33,25 @@ class Dimmer extends Core {
 			this.log('Transtime value was change to:', newSettings.transtime);
 
 			// onOffTransitionTime is in unit 0.1s
-			this.node.endpoints[0].clusters['genLevelCtrl'].write("onOffTransitionTime", (newSettings.transtime*10))
-			  .then(result => {
+			this.node.endpoints[0].clusters['genLevelCtrl'].write("onOffTransitionTime", (newSettings.transtime * 10))
+				.then(result => {
 					//this.log('onOffTransitionTime return value:', result);
-			  })
-			  .catch(err => {
+				})
+				.catch(err => {
 					this.error('failed to set onOffTransitionTime', err);
-			  });
+				});
 		}
 
 		if (changedKeysArr.indexOf("min_dim_level") > -1) {
 			this.log('Min dim level value was change to:', newSettings.min_dim_level);
 
 			this.node.endpoints[0].clusters['lightingBallastCfg'].write("minLevel", (newSettings.min_dim_level))
-			  .then(result => {
+				.then(result => {
 					//this.log('minLevel return value:', result);
-			  })
-			  .catch(err => {
+				})
+				.catch(err => {
 					this.error('failed to set minLevel', err);
-			  });
+				});
 		}
 	}
 }
