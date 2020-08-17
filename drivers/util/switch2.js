@@ -1,9 +1,42 @@
 'use strict';
 
-const Homey = require('homey');
-const Core = require('./core.js');
+const { ZigBeeDevice } = require('homey-zigbeedriver');
+const { CLUSTER } = require('zigbee-clusters');
 
-class Switch2 extends Core {
+class Switch2 extends ZigBeeDevice {
+
+	async onNodeInit(zclNode) {
+		//Application Endpoint #1 – On/off Output #1
+		//Application Endpoint #2 – On/off Output #2
+		if (this.hasCapability('onoff')) {
+			this.registerCapability('onoff', CLUSTER.ON_OFF);
+		}
+
+		// measure_power
+		//S2, S2-R, endpoint #5
+		let meteringEndpoint = 5;
+		if (this.hasCapability('measure_power')) {
+			await this.configureAttributeReporting([
+				{
+					endpointId: meteringEndpoint,
+					cluster: CLUSTER.METERING,
+					attributeName: 'instantaneousDemand',
+					minInterval: 0,
+					maxInterval: 60000, //one per ~16 hours at minimum
+					minChange: 1,
+				}
+			]);
+
+			zclNode.endpoints[meteringEndpoint].clusters[CLUSTER.METERING.NAME]
+				.on('attr.instantaneousDemand', (instantaneousDemand) => {
+					let watt = Math.max(instantaneousDemand, 0);
+					this.log('watt: ', watt);
+					this.setCapabilityValue('measure_power', watt);
+				});
+		}
+	}
+
+	/*
 
 	onMeshInit() {
 		//Set endpoint for metering information
@@ -94,7 +127,7 @@ class Switch2 extends Core {
 			userOpts || {}
 		);
 	}
-
+*/
 }
 
 module.exports = Switch2;
