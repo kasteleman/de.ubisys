@@ -1,6 +1,6 @@
 'use strict';
 
-const Switch2 = require('../util/switch2.js');
+const Switch2 = require('../../lib/switch2.js');
 
 class S2R_5502 extends Switch2 {
 

@@ -1,6 +1,6 @@
 'use strict';
 
-const Dimmer = require('../util/dimmer.js');
+const Dimmer = require('../../lib/dimmer.js');
 
 class D1R_5503 extends Dimmer {
 

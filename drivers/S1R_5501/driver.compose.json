@@ -1,0 +1,72 @@
+{
+  "name": {
+    "en": "S1 RAILSWITCH"
+  },
+  "energy": {
+    "approximation": {
+      "usageOn": 10,
+      "usageOff": 0
+    }
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff",
+    "measure_power"
+  ],
+  "images": {
+    "large": "drivers/S1R_5501/assets/images/large.png",
+    "small": "drivers/S1R_5501/assets/images/small.png"
+  },
+  "zigbee": {
+    "manufacturerName": "ubisys",
+    "productId": "S1-R (5601)",
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "4": {
+        "clusters": [
+          1794
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S1-R also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
+        "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S1-R kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
+      }
+    }
+  },
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+        "en": "Information"
+      },
+      "children": [
+        {
+          "id": "dateCode",
+          "type": "text",
+          "label": {
+            "en": "Manufactured"
+          },
+          "value": ""
+        },
+        {
+          "id": "hwVersion",
+          "type": "number",
+          "label": {
+            "en": "Hardware version"
+          },
+          "value": 0
+        }
+      ]
+    }
+  ]
+}
