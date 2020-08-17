@@ -1,0 +1,36 @@
+{
+  "id": "de.ubisys",
+  "sdk": 3,
+  "name": {
+    "en": "Ubisys SmartHome ZigBee Devices"
+  },
+  "description": {
+    "en": "Support for Ubisys SmartHome ZigBee Devices"
+  },
+  "category": "lights",
+  "version": "2.0.0",
+  "compatibility": ">=5.0.0",
+  "author": {
+    "name": "Martin Brasse",
+    "email": "kasteleman@gmail.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Richard Barkestam",
+        "email": "richard@barkestam.se"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "kasteleman"
+      }
+    }
+  },
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  }
+}

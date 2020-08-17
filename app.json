@@ -35,28 +35,28 @@
   },
   "drivers": [
     {
-      "id": "S1_5501",
       "name": {
-        "en": "S1 POWER SWITCH"
+        "en": "D1-R RAILDIMMER"
       },
       "energy": {
         "approximation": {
           "usageOn": 10,
-          "usageOff": 0.0
+          "usageOff": 0
         }
       },
-      "class": "socket",
+      "class": "light",
       "capabilities": [
         "onoff",
+        "dim",
         "measure_power"
       ],
       "images": {
-        "large": "drivers/S1_5501/assets/images/large.png",
-        "small": "drivers/S1_5501/assets/images/small.png"
+        "large": "drivers/D1R_5503/assets/images/large.png",
+        "small": "drivers/D1R_5503/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "ubisys",
-        "productId": "S1 (5501)",
+        "productId": "D1-R (5603)",
         "endpoints": {
           "1": {
             "clusters": [
@@ -64,10 +64,11 @@
               3,
               4,
               5,
-              6
+              6,
+              8
             ]
           },
-          "3": {
+          "4": {
             "clusters": [
               1794
             ]
@@ -75,8 +76,8 @@
         },
         "learnmode": {
           "instruction": {
-            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S1 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
-            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S1 kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
+            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n D1-R also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
+            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n D1-R kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
           }
         }
       },
@@ -105,17 +106,92 @@
             }
           ]
         }
-      ]
+      ],
+      "id": "D1R_5503"
     },
     {
-      "id": "S1R_5501",
+      "name": {
+        "en": "D1 DIMMER"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 10,
+          "usageOff": 0
+        }
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "measure_power"
+      ],
+      "images": {
+        "large": "drivers/D1_5503/assets/images/large.png",
+        "small": "drivers/D1_5503/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "ubisys",
+        "productId": "D1 (5503)",
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              8
+            ]
+          },
+          "4": {
+            "clusters": [
+              1794
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n D1 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
+            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n D1 kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
+          }
+        }
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Information"
+          },
+          "children": [
+            {
+              "id": "dateCode",
+              "type": "text",
+              "label": {
+                "en": "Manufactured"
+              },
+              "value": ""
+            },
+            {
+              "id": "hwVersion",
+              "type": "number",
+              "label": {
+                "en": "Hardware version"
+              },
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "id": "D1_5503"
+    },
+    {
       "name": {
         "en": "S1 RAILSWITCH"
       },
       "energy": {
         "approximation": {
           "usageOn": 10,
-          "usageOff": 0.0
+          "usageOff": 0
         }
       },
       "class": "socket",
@@ -178,32 +254,31 @@
             }
           ]
         }
-      ]
+      ],
+      "id": "S1R_5501"
     },
     {
-      "id": "S2_5502",
       "name": {
-        "en": "S2 POWER SWITCH"
+        "en": "S1 POWER SWITCH"
       },
       "energy": {
         "approximation": {
           "usageOn": 10,
-          "usageOff": 0.0
+          "usageOff": 0
         }
       },
       "class": "socket",
       "capabilities": [
         "onoff",
-        "onoff.2",
         "measure_power"
       ],
       "images": {
-        "large": "drivers/S2_5502/assets/images/large.png",
-        "small": "drivers/S2_5502/assets/images/small.png"
+        "large": "drivers/S1_5501/assets/images/large.png",
+        "small": "drivers/S1_5501/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "ubisys",
-        "productId": "S2 (5502)",
+        "productId": "S1 (5501)",
         "endpoints": {
           "1": {
             "clusters": [
@@ -214,16 +289,7 @@
               6
             ]
           },
-          "2": {
-            "clusters": [
-              0,
-              3,
-              4,
-              5,
-              6
-            ]
-          },
-          "5": {
+          "3": {
             "clusters": [
               1794
             ]
@@ -231,8 +297,8 @@
         },
         "learnmode": {
           "instruction": {
-            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S2 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
-            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S2 kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
+            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S1 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
+            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S1 kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
           }
         }
       },
@@ -261,17 +327,17 @@
             }
           ]
         }
-      ]
+      ],
+      "id": "S1_5501"
     },
     {
-      "id": "S2R_5502",
       "name": {
         "en": "S2 RAILSWITCH"
       },
       "energy": {
         "approximation": {
           "usageOn": 10,
-          "usageOff": 0.0
+          "usageOff": 0
         }
       },
       "class": "socket",
@@ -344,32 +410,32 @@
             }
           ]
         }
-      ]
+      ],
+      "id": "S2R_5502"
     },
     {
-      "id": "D1_5503",
       "name": {
-        "en": "D1 DIMMER"
+        "en": "S2 POWER SWITCH"
       },
       "energy": {
         "approximation": {
           "usageOn": 10,
-          "usageOff": 0.0
+          "usageOff": 0
         }
       },
-      "class": "light",
+      "class": "socket",
       "capabilities": [
         "onoff",
-        "dim",
+        "onoff.2",
         "measure_power"
       ],
       "images": {
-        "large": "drivers/D1_5503/assets/images/large.png",
-        "small": "drivers/D1_5503/assets/images/small.png"
+        "large": "drivers/S2_5502/assets/images/large.png",
+        "small": "drivers/S2_5502/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "ubisys",
-        "productId": "D1 (5503)",
+        "productId": "S2 (5502)",
         "endpoints": {
           "1": {
             "clusters": [
@@ -377,11 +443,19 @@
               3,
               4,
               5,
-              6,
-              8
+              6
             ]
           },
-          "4": {
+          "2": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "5": {
             "clusters": [
               1794
             ]
@@ -389,8 +463,8 @@
         },
         "learnmode": {
           "instruction": {
-            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n D1 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
-            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n D1 kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
+            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S2 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
+            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S2 kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
           }
         }
       },
@@ -419,82 +493,8 @@
             }
           ]
         }
-      ]
-    },
-    {
-      "id": "D1R_5503",
-      "name": {
-        "en": "D1-R RAILDIMMER"
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 10,
-          "usageOff": 0.0
-        }
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "measure_power"
       ],
-      "images": {
-        "large": "drivers/D1R_5503/assets/images/large.png",
-        "small": "drivers/D1R_5503/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "ubisys",
-        "productId": "D1-R (5603)",
-        "endpoints": {
-          "1": {
-            "clusters": [
-              0,
-              3,
-              4,
-              5,
-              6,
-              8
-            ]
-          },
-          "4": {
-            "clusters": [
-              1794
-            ]
-          }
-        },
-        "learnmode": {
-          "instruction": {
-            "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n D1-R also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
-            "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n D1-R kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
-          }
-        }
-      },
-      "settings": [
-        {
-          "type": "group",
-          "label": {
-            "en": "Information"
-          },
-          "children": [
-            {
-              "id": "dateCode",
-              "type": "text",
-              "label": {
-                "en": "Manufactured"
-              },
-              "value": ""
-            },
-            {
-              "id": "hwVersion",
-              "type": "number",
-              "label": {
-                "en": "Hardware version"
-              },
-              "value": 0
-            }
-          ]
-        }
-      ]
+      "id": "S2_5502"
     }
   ]
 }
