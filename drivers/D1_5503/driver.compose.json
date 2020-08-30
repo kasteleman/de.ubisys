@@ -12,7 +12,8 @@
   "capabilities": [
     "onoff",
     "dim",
-    "measure_power"
+    "measure_power",
+    "meter_power"
   ],
   "images": {
     "large": "drivers/D1_5503/assets/images/large.png",
@@ -53,29 +54,6 @@
     }
   },
   "settings": [
-    {
-      "type": "group",
-      "label": {
-        "en": "Information"
-      },
-      "children": [
-        {
-          "id": "dateCode",
-          "type": "text",
-          "label": {
-            "en": "Manufactured"
-          },
-          "value": ""
-        },
-        {
-          "id": "hwVersion",
-          "type": "number",
-          "label": {
-            "en": "Hardware version"
-          },
-          "value": 0
-        }
-      ]
-    }
+
   ]
 }

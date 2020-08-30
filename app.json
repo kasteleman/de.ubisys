@@ -48,7 +48,8 @@
       "capabilities": [
         "onoff",
         "dim",
-        "measure_power"
+        "measure_power",
+        "meter_power"
       ],
       "images": {
         "large": "drivers/D1R_5503/assets/images/large.png",
@@ -88,32 +89,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "type": "group",
-          "label": {
-            "en": "Information"
-          },
-          "children": [
-            {
-              "id": "dateCode",
-              "type": "text",
-              "label": {
-                "en": "Manufactured"
-              },
-              "value": ""
-            },
-            {
-              "id": "hwVersion",
-              "type": "number",
-              "label": {
-                "en": "Hardware version"
-              },
-              "value": 0
-            }
-          ]
-        }
-      ],
+      "settings": [],
       "id": "D1R_5503"
     },
     {
@@ -130,7 +106,8 @@
       "capabilities": [
         "onoff",
         "dim",
-        "measure_power"
+        "measure_power",
+        "meter_power"
       ],
       "images": {
         "large": "drivers/D1_5503/assets/images/large.png",
@@ -170,32 +147,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "type": "group",
-          "label": {
-            "en": "Information"
-          },
-          "children": [
-            {
-              "id": "dateCode",
-              "type": "text",
-              "label": {
-                "en": "Manufactured"
-              },
-              "value": ""
-            },
-            {
-              "id": "hwVersion",
-              "type": "number",
-              "label": {
-                "en": "Hardware version"
-              },
-              "value": 0
-            }
-          ]
-        }
-      ],
+      "settings": [],
       "id": "D1_5503"
     },
     {
@@ -211,7 +163,8 @@
       "class": "socket",
       "capabilities": [
         "onoff",
-        "measure_power"
+        "measure_power",
+        "meter_power"
       ],
       "images": {
         "large": "drivers/S1R_5501/assets/images/large.png",
@@ -250,32 +203,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "type": "group",
-          "label": {
-            "en": "Information"
-          },
-          "children": [
-            {
-              "id": "dateCode",
-              "type": "text",
-              "label": {
-                "en": "Manufactured"
-              },
-              "value": ""
-            },
-            {
-              "id": "hwVersion",
-              "type": "number",
-              "label": {
-                "en": "Hardware version"
-              },
-              "value": 0
-            }
-          ]
-        }
-      ],
+      "settings": [],
       "id": "S1R_5501"
     },
     {
@@ -291,7 +219,8 @@
       "class": "socket",
       "capabilities": [
         "onoff",
-        "measure_power"
+        "measure_power",
+        "meter_power"
       ],
       "images": {
         "large": "drivers/S1_5501/assets/images/large.png",
@@ -330,32 +259,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "type": "group",
-          "label": {
-            "en": "Information"
-          },
-          "children": [
-            {
-              "id": "dateCode",
-              "type": "text",
-              "label": {
-                "en": "Manufactured"
-              },
-              "value": ""
-            },
-            {
-              "id": "hwVersion",
-              "type": "number",
-              "label": {
-                "en": "Hardware version"
-              },
-              "value": 0
-            }
-          ]
-        }
-      ],
+      "settings": [],
       "id": "S1_5501"
     },
     {
@@ -372,7 +276,8 @@
       "capabilities": [
         "onoff",
         "onoff.2",
-        "measure_power"
+        "measure_power",
+        "meter_power"
       ],
       "images": {
         "large": "drivers/S2R_5502/assets/images/large.png",
@@ -424,32 +329,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "type": "group",
-          "label": {
-            "en": "Information"
-          },
-          "children": [
-            {
-              "id": "dateCode",
-              "type": "text",
-              "label": {
-                "en": "Manufactured"
-              },
-              "value": ""
-            },
-            {
-              "id": "hwVersion",
-              "type": "number",
-              "label": {
-                "en": "Hardware version"
-              },
-              "value": 0
-            }
-          ]
-        }
-      ],
+      "settings": [],
       "id": "S2R_5502"
     },
     {
@@ -466,7 +346,8 @@
       "capabilities": [
         "onoff",
         "onoff.2",
-        "measure_power"
+        "measure_power",
+        "meter_power"
       ],
       "images": {
         "large": "drivers/S2_5502/assets/images/large.png",
@@ -518,32 +399,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "type": "group",
-          "label": {
-            "en": "Information"
-          },
-          "children": [
-            {
-              "id": "dateCode",
-              "type": "text",
-              "label": {
-                "en": "Manufactured"
-              },
-              "value": ""
-            },
-            {
-              "id": "hwVersion",
-              "type": "number",
-              "label": {
-                "en": "Hardware version"
-              },
-              "value": 0
-            }
-          ]
-        }
-      ],
+      "settings": [],
       "id": "S2_5502"
     }
   ]
