@@ -365,7 +365,7 @@
                   "direction": "reported",
                   "attributeDataType": 16,
                   "minInterval": 0,
-                  "maxInterval": 0,
+                  "maxInterval": 300,
                   "status": "SUCCESS"
                 }
               },
@@ -419,13 +419,13 @@
               {
                 "id": 0,
                 "name": "currentLevel",
-                "value": 1,
+                "value": 254,
                 "reportingConfiguration": {
                   "direction": "reported",
                   "attributeDataType": 32,
-                  "minInterval": 1,
-                  "maxInterval": 0,
-                  "minChange": 1,
+                  "minInterval": 0,
+                  "maxInterval": 300,
+                  "minChange": 10,
                   "status": "SUCCESS"
                 }
               },
@@ -935,7 +935,7 @@
               {
                 "id": 0,
                 "name": "currentSummationDelivered",
-                "value": 858,
+                "value": 239557,
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -953,7 +953,7 @@
               {
                 "id": 2,
                 "name": "currentMaxDemandDelivered",
-                "value": 42,
+                "value": 40,
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -1017,7 +1017,7 @@
                   "direction": "reported",
                   "attributeDataType": 42,
                   "minInterval": 0,
-                  "maxInterval": 60000,
+                  "maxInterval": 300,
                   "minChange": 1,
                   "status": "SUCCESS"
                 }
@@ -1057,7 +1057,7 @@
               {
                 "id": 768,
                 "name": "acFrequency",
-                "value": 49589,
+                "value": 49535,
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -1087,7 +1087,7 @@
               {
                 "id": 1285,
                 "name": "rmsVoltage",
-                "value": 232,
+                "value": 234,
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
