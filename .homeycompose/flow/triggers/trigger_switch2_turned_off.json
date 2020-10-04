@@ -1,0 +1,13 @@
+{
+  "id": "trigger_switch2_turned_off",
+  "title": {
+    "en": "Turned off (second switch)"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=S2_5502|S2R_5502"
+    }
+  ]
+}

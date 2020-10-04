@@ -935,7 +935,7 @@
               {
                 "id": 0,
                 "name": "currentSummationDelivered",
-                "value": 239557,
+                "value": 4711271,
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -1017,7 +1017,7 @@
                   "direction": "reported",
                   "attributeDataType": 42,
                   "minInterval": 0,
-                  "maxInterval": 300,
+                  "maxInterval": 600,
                   "minChange": 1,
                   "status": "SUCCESS"
                 }
@@ -1057,7 +1057,7 @@
               {
                 "id": 768,
                 "name": "acFrequency",
-                "value": 49535,
+                "value": 49589,
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -1087,7 +1087,7 @@
               {
                 "id": 1285,
                 "name": "rmsVoltage",
-                "value": 234,
+                "value": 230,
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"

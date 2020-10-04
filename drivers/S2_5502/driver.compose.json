@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "S2 POWER SWITCH"
+    "en": "S2 POWER SWITCH SW1"
   },
   "energy": {
     "approximation": {
@@ -63,9 +63,17 @@
         "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S2 also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
         "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S2 kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
       }
+    },
+    "devices": {
+      "secondSwitch": {
+        "capabilities": [
+          "onoff"
+        ],
+        "name": {
+          "en": "S2 POWER SWITCH SW2"
+        }
+      }
     }
   },
-  "settings": [
-
-  ]
+  "settings": []
 }

@@ -15,6 +15,13 @@
     "measure_power",
     "meter_power"
   ],
+  "capabilitiesOptions": {
+    "dim": {
+      "opts": {
+        "duration": true
+      }
+    }
+  },
   "images": {
     "large": "drivers/D1R_5503/assets/images/large.png",
     "small": "drivers/D1R_5503/assets/images/small.png"
