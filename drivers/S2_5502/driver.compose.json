@@ -11,7 +11,6 @@
   "class": "socket",
   "capabilities": [
     "onoff",
-    "onoff.2",
     "measure_power",
     "meter_power"
   ],
@@ -49,12 +48,59 @@
           8
         ]
       },
+      "3": {
+        "clusters": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "bindings": [
+          6,
+          8
+        ]
+      },
+      "4": {
+        "clusters": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "bindings": [
+          6,
+          8
+        ]
+      },
       "5": {
         "clusters": [
           1794
         ],
         "bindings": [
           1794
+        ]
+      },
+      "232": {
+        "clusters": [
+          0,
+          21,
+          64512
+        ],
+        "bindings": [
+          3,
+          25
+        ]
+      },
+      "242": {
+        "clusters": [
+          33
+        ],
+        "bindings": [
+          33
         ]
       }
     },
