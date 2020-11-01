@@ -34,36 +34,6 @@
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"
   },
-  "flow": {
-    "triggers": [
-      {
-        "id": "trigger_switch2_turned_off",
-        "title": {
-          "en": "Turned off (second switch)"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S2_5502|S2R_5502"
-          }
-        ]
-      },
-      {
-        "id": "trigger_switch2_turned_on",
-        "title": {
-          "en": "Turned off (second switch)"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S2_5502|S2R_5502"
-          }
-        ]
-      }
-    ]
-  },
   "drivers": [
     {
       "name": {
@@ -104,19 +74,59 @@
               4,
               5,
               6,
-              8
+              8,
+              769,
+              64513
+            ],
+            "bindings": []
+          },
+          "2": {
+            "clusters": [
+              0,
+              3
             ],
             "bindings": [
+              5,
+              6,
+              8
+            ]
+          },
+          "3": {
+            "clusters": [
+              0,
+              3
+            ],
+            "bindings": [
+              5,
               6,
               8
             ]
           },
           "4": {
             "clusters": [
-              1794
+              0,
+              1794,
+              2820
+            ],
+            "bindings": []
+          },
+          "232": {
+            "clusters": [
+              0,
+              21,
+              64512
             ],
             "bindings": [
-              1794
+              3,
+              25
+            ]
+          },
+          "242": {
+            "clusters": [
+              33
+            ],
+            "bindings": [
+              33
             ]
           }
         },
@@ -173,21 +183,12 @@
               769,
               64513
             ],
-            "bindings": [
-              6,
-              8
-            ]
+            "bindings": []
           },
           "2": {
             "clusters": [
               0,
-              3,
-              4,
-              5,
-              6,
-              8,
-              769,
-              64513
+              3
             ],
             "bindings": [
               5,
@@ -276,17 +277,55 @@
               5,
               6
             ],
+            "bindings": []
+          },
+          "2": {
+            "clusters": [
+              0,
+              3
+            ],
             "bindings": [
+              5,
+              6,
+              8
+            ]
+          },
+          "3": {
+            "clusters": [
+              0,
+              3
+            ],
+            "bindings": [
+              5,
               6,
               8
             ]
           },
           "4": {
             "clusters": [
-              1794
+              0,
+              1794,
+              2820
+            ],
+            "bindings": []
+          },
+          "232": {
+            "clusters": [
+              0,
+              21,
+              64512
             ],
             "bindings": [
-              1794
+              3,
+              25
+            ]
+          },
+          "242": {
+            "clusters": [
+              33
+            ],
+            "bindings": [
+              33
             ]
           }
         },
@@ -332,17 +371,44 @@
               5,
               6
             ],
+            "bindings": []
+          },
+          "2": {
+            "clusters": [
+              0,
+              3
+            ],
             "bindings": [
+              5,
               6,
               8
             ]
           },
           "3": {
             "clusters": [
-              1794
+              0,
+              1794,
+              2820
+            ],
+            "bindings": []
+          },
+          "232": {
+            "clusters": [
+              0,
+              21,
+              64512
             ],
             "bindings": [
-              1794
+              3,
+              25
+            ]
+          },
+          "242": {
+            "clusters": [
+              33
+            ],
+            "bindings": [
+              33
             ]
           }
         },
@@ -358,7 +424,7 @@
     },
     {
       "name": {
-        "en": "S2 RAILSWITCH"
+        "en": "S2 RAILSWITCH SW1"
       },
       "energy": {
         "approximation": {
@@ -369,7 +435,6 @@
       "class": "socket",
       "capabilities": [
         "onoff",
-        "onoff.2",
         "measure_power",
         "meter_power"
       ],
@@ -389,10 +454,7 @@
               5,
               6
             ],
-            "bindings": [
-              6,
-              8
-            ]
+            "bindings": []
           },
           "2": {
             "clusters": [
@@ -402,17 +464,55 @@
               5,
               6
             ],
+            "bindings": []
+          },
+          "3": {
+            "clusters": [
+              0,
+              3
+            ],
             "bindings": [
+              5,
+              6,
+              8
+            ]
+          },
+          "4": {
+            "clusters": [
+              0,
+              3
+            ],
+            "bindings": [
+              5,
               6,
               8
             ]
           },
           "5": {
             "clusters": [
-              1794
+              0,
+              1794,
+              2820
+            ],
+            "bindings": []
+          },
+          "232": {
+            "clusters": [
+              0,
+              21,
+              64512
             ],
             "bindings": [
-              1794
+              3,
+              25
+            ]
+          },
+          "242": {
+            "clusters": [
+              33
+            ],
+            "bindings": [
+              33
             ]
           }
         },
@@ -420,6 +520,16 @@
           "instruction": {
             "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S2-R also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
             "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S2-R kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
+          }
+        },
+        "devices": {
+          "secondSwitch": {
+            "capabilities": [
+              "onoff"
+            ],
+            "name": {
+              "en": "S2 RAILSWITCH SW2"
+            }
           }
         }
       },
@@ -458,10 +568,7 @@
               5,
               6
             ],
-            "bindings": [
-              6,
-              8
-            ]
+            "bindings": []
           },
           "2": {
             "clusters": [
@@ -471,21 +578,15 @@
               5,
               6
             ],
-            "bindings": [
-              6,
-              8
-            ]
+            "bindings": []
           },
           "3": {
             "clusters": [
               0,
-              3,
-              4,
-              5,
-              6,
-              8
+              3
             ],
             "bindings": [
+              5,
               6,
               8
             ]
@@ -493,24 +594,21 @@
           "4": {
             "clusters": [
               0,
-              3,
-              4,
-              5,
-              6,
-              8
+              3
             ],
             "bindings": [
+              5,
               6,
               8
             ]
           },
           "5": {
             "clusters": [
-              1794
+              0,
+              1794,
+              2820
             ],
-            "bindings": [
-              1794
-            ]
+            "bindings": []
           },
           "232": {
             "clusters": [
