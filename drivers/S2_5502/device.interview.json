@@ -1,6 +1,6 @@
 {
   "ids": {
-    "modelId": "D1 (5503)",
+    "modelId": "S2 (5502)",
     "manufacturerName": "ubisys"
   },
   "endpoints": {
@@ -8,7 +8,7 @@
       {
         "endpointId": 1,
         "applicationProfileId": 260,
-        "applicationDeviceId": 257,
+        "applicationDeviceId": 266,
         "applicationDeviceVersion": 0,
         "_reserved1": 1,
         "inputClusters": [
@@ -16,33 +16,29 @@
           3,
           4,
           5,
-          6,
-          8,
-          769,
-          64513
+          6
         ],
         "outputClusters": []
       },
       {
         "endpointId": 2,
         "applicationProfileId": 260,
-        "applicationDeviceId": 260,
+        "applicationDeviceId": 266,
         "applicationDeviceVersion": 0,
         "_reserved1": 1,
         "inputClusters": [
           0,
-          3
-        ],
-        "outputClusters": [
+          3,
+          4,
           5,
-          6,
-          8
-        ]
+          6
+        ],
+        "outputClusters": []
       },
       {
         "endpointId": 3,
         "applicationProfileId": 260,
-        "applicationDeviceId": 260,
+        "applicationDeviceId": 1,
         "applicationDeviceVersion": 0,
         "_reserved1": 1,
         "inputClusters": [
@@ -57,6 +53,22 @@
       },
       {
         "endpointId": 4,
+        "applicationProfileId": 260,
+        "applicationDeviceId": 1,
+        "applicationDeviceVersion": 0,
+        "_reserved1": 1,
+        "inputClusters": [
+          0,
+          3
+        ],
+        "outputClusters": [
+          5,
+          6,
+          8
+        ]
+      },
+      {
+        "endpointId": 5,
         "applicationProfileId": 260,
         "applicationDeviceId": 1281,
         "applicationDeviceVersion": 0,
@@ -160,7 +172,7 @@
               {
                 "id": 5,
                 "name": "modelId",
-                "value": "D1 (5503)",
+                "value": "S2 (5502)",
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -169,7 +181,7 @@
               {
                 "id": 6,
                 "name": "dateCode",
-                "value": "20170619-DE-FB0",
+                "value": "20190806-DE-FB0",
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -413,140 +425,6 @@
             ],
             "commandsGenerated": "UNSUP_GENERAL_COMMAND",
             "commandsReceived": "UNSUP_GENERAL_COMMAND"
-          },
-          "levelControl": {
-            "attributes": [
-              {
-                "id": 0,
-                "name": "currentLevel",
-                "value": 254,
-                "reportingConfiguration": {
-                  "direction": "reported",
-                  "attributeDataType": 32,
-                  "minInterval": 0,
-                  "maxInterval": 300,
-                  "minChange": 10,
-                  "status": "SUCCESS"
-                }
-              },
-              {
-                "id": 1,
-                "name": "remainingTime",
-                "value": 0,
-                "reportingConfiguration": {
-                  "status": "NOT_FOUND",
-                  "direction": "reported"
-                }
-              },
-              {
-                "id": 15,
-                "reportingConfiguration": {
-                  "status": "NOT_FOUND",
-                  "direction": "reported"
-                }
-              },
-              {
-                "id": 16,
-                "name": "onOffTransitionTime",
-                "value": 10,
-                "reportingConfiguration": {
-                  "status": "NOT_FOUND",
-                  "direction": "reported"
-                }
-              },
-              {
-                "id": 17,
-                "name": "onLevel",
-                "value": 255,
-                "reportingConfiguration": {
-                  "status": "NOT_FOUND",
-                  "direction": "reported"
-                }
-              },
-              {
-                "id": 16384,
-                "reportingConfiguration": {
-                  "status": "NOT_FOUND",
-                  "direction": "reported"
-                }
-              },
-              {
-                "id": 65533,
-                "name": "clusterRevision",
-                "value": 1,
-                "reportingConfiguration": {
-                  "status": "NOT_FOUND",
-                  "direction": "reported"
-                }
-              }
-            ],
-            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
-            "commandsReceived": "UNSUP_GENERAL_COMMAND"
-          },
-          "ballastConfiguration": {
-            "attributes": [
-              {
-                "id": 0,
-                "name": "physicalMinLevel",
-                "value": 1,
-                "reportingConfiguration": {
-                  "status": "NOT_FOUND",
-                  "direction": "reported"
-                }
-              },
-              {
-                "id": 1,
-                "name": "physicalMaxLevel",
-                "value": 254,
-                "reportingConfiguration": {
-                  "status": "NOT_FOUND",
-                  "direction": "reported"
-                }
-              },
-              {
-                "id": 2,
-                "name": "ballastStatus",
-                "value": {
-                  "type": "Buffer",
-                  "data": [
-                    0
-                  ]
-                },
-                "reportingConfiguration": {
-                  "status": "NOT_FOUND",
-                  "direction": "reported"
-                }
-              },
-              {
-                "id": 16,
-                "name": "minLevel",
-                "value": 1,
-                "reportingConfiguration": {
-                  "status": "NOT_FOUND",
-                  "direction": "reported"
-                }
-              },
-              {
-                "id": 17,
-                "name": "maxLevel",
-                "value": 254,
-                "reportingConfiguration": {
-                  "status": "NOT_FOUND",
-                  "direction": "reported"
-                }
-              },
-              {
-                "id": 65533,
-                "name": "clusterRevision",
-                "value": 1,
-                "reportingConfiguration": {
-                  "status": "NOT_FOUND",
-                  "direction": "reported"
-                }
-              }
-            ],
-            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
-            "commandsReceived": "UNSUP_GENERAL_COMMAND"
           }
         },
         "bindings": {}
@@ -603,7 +481,7 @@
               {
                 "id": 5,
                 "name": "modelId",
-                "value": "D1 (5503)",
+                "value": "S2 (5502)",
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -612,7 +490,7 @@
               {
                 "id": 6,
                 "name": "dateCode",
-                "value": "20170619-DE-FB0",
+                "value": "20190806-DE-FB0",
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -622,6 +500,36 @@
                 "id": 7,
                 "name": "powerSource",
                 "value": "mains",
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 8,
+                "name": "appProfileVersion",
+                "value": 255,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 9,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 10,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 11,
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -640,6 +548,15 @@
                 "id": 17,
                 "name": "physicalEnv",
                 "value": "Unspecified",
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 16384,
+                "name": "swBuildId",
+                "value": "",
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -679,13 +596,147 @@
             ],
             "commandsGenerated": "UNSUP_GENERAL_COMMAND",
             "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "groups": {
+            "attributes": [
+              {
+                "id": 0,
+                "name": "nameSupport",
+                "value": {
+                  "type": "Buffer",
+                  "data": [
+                    0
+                  ]
+                },
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 65533,
+                "name": "clusterRevision",
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              }
+            ],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "scenes": {
+            "attributes": [
+              {
+                "id": 0,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 2,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 3,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 4,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 65533,
+                "name": "clusterRevision",
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              }
+            ],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "onOff": {
+            "attributes": [
+              {
+                "id": 0,
+                "name": "onOff",
+                "value": true,
+                "reportingConfiguration": {
+                  "direction": "reported",
+                  "attributeDataType": 16,
+                  "minInterval": 0,
+                  "maxInterval": 300,
+                  "status": "SUCCESS"
+                }
+              },
+              {
+                "id": 16384,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 16385,
+                "name": "onTime",
+                "value": 0,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 16386,
+                "name": "offWaitTime",
+                "value": 0,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 16387,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 65533,
+                "name": "clusterRevision",
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              }
+            ],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
           }
         },
-        "bindings": {
-          "scenes": {},
-          "onOff": {},
-          "levelControl": {}
-        }
+        "bindings": {}
       },
       "3": {
         "clusters": {
@@ -739,7 +790,7 @@
               {
                 "id": 5,
                 "name": "modelId",
-                "value": "D1 (5503)",
+                "value": "S2 (5502)",
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -748,7 +799,7 @@
               {
                 "id": 6,
                 "name": "dateCode",
-                "value": "20170619-DE-FB0",
+                "value": "20190806-DE-FB0",
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -875,7 +926,7 @@
               {
                 "id": 5,
                 "name": "modelId",
-                "value": "D1 (5503)",
+                "value": "S2 (5502)",
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -884,7 +935,143 @@
               {
                 "id": 6,
                 "name": "dateCode",
-                "value": "20170619-DE-FB0",
+                "value": "20190806-DE-FB0",
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 7,
+                "name": "powerSource",
+                "value": "mains",
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 16,
+                "name": "locationDesc",
+                "value": "",
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 17,
+                "name": "physicalEnv",
+                "value": "Unspecified",
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 65533,
+                "name": "clusterRevision",
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              }
+            ],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "identify": {
+            "attributes": [
+              {
+                "id": 0,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 65533,
+                "name": "clusterRevision",
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              }
+            ],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          }
+        },
+        "bindings": {
+          "scenes": {},
+          "onOff": {},
+          "levelControl": {}
+        }
+      },
+      "5": {
+        "clusters": {
+          "basic": {
+            "attributes": [
+              {
+                "id": 0,
+                "name": "zclVersion",
+                "value": 2,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 1,
+                "name": "appVersion",
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 2,
+                "name": "stackVersion",
+                "value": 1,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 3,
+                "name": "hwVersion",
+                "value": 5,
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 4,
+                "name": "manufacturerName",
+                "value": "ubisys",
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 5,
+                "name": "modelId",
+                "value": "S2 (5502)",
+                "reportingConfiguration": {
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 6,
+                "name": "dateCode",
+                "value": "20190806-DE-FB0",
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -935,7 +1122,7 @@
               {
                 "id": 0,
                 "name": "currentSummationDelivered",
-                "value": 4711271,
+                "value": 0,
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -953,7 +1140,7 @@
               {
                 "id": 2,
                 "name": "currentMaxDemandDelivered",
-                "value": 40,
+                "value": 44,
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -971,7 +1158,7 @@
               {
                 "id": 6,
                 "name": "powerFactor",
-                "value": 100,
+                "value": 0,
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -1014,12 +1201,8 @@
                 "name": "instantaneousDemand",
                 "value": 0,
                 "reportingConfiguration": {
-                  "direction": "reported",
-                  "attributeDataType": 42,
-                  "minInterval": 0,
-                  "maxInterval": 600,
-                  "minChange": 1,
-                  "status": "SUCCESS"
+                  "status": "NOT_FOUND",
+                  "direction": "reported"
                 }
               },
               {
@@ -1057,7 +1240,7 @@
               {
                 "id": 768,
                 "name": "acFrequency",
-                "value": 49589,
+                "value": 49578,
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -1087,7 +1270,7 @@
               {
                 "id": 1285,
                 "name": "rmsVoltage",
-                "value": 230,
+                "value": 229,
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -1096,7 +1279,7 @@
               {
                 "id": 1288,
                 "name": "rmsCurrent",
-                "value": 4,
+                "value": 1,
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -1206,7 +1389,7 @@
               {
                 "id": 5,
                 "name": "modelId",
-                "value": "D1 (5503)",
+                "value": "S2 (5502)",
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"
@@ -1215,7 +1398,7 @@
               {
                 "id": 6,
                 "name": "dateCode",
-                "value": "20170619-DE-FB0",
+                "value": "20190806-DE-FB0",
                 "reportingConfiguration": {
                   "status": "NOT_FOUND",
                   "direction": "reported"

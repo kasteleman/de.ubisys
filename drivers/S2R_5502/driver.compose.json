@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "S2 RAILSWITCH"
+    "en": "S2 RAILSWITCH SW1"
   },
   "energy": {
     "approximation": {
@@ -11,7 +11,6 @@
   "class": "socket",
   "capabilities": [
     "onoff",
-    "onoff.2",
     "measure_power",
     "meter_power"
   ],
@@ -32,8 +31,7 @@
           6
         ],
         "bindings": [
-          6,
-          8
+          6
         ]
       },
       "2": {
@@ -45,16 +43,58 @@
           6
         ],
         "bindings": [
+          6
+        ]
+      },
+      "3": {
+        "clusters": [
+          0,
+          3
+        ],
+        "bindings": [
+          5,
+          6,
+          8
+        ]
+      },
+      "4": {
+        "clusters": [
+          0,
+          3
+        ],
+        "bindings": [
+          5,
           6,
           8
         ]
       },
       "5": {
         "clusters": [
-          1794
+          0,
+          1794,
+          2820
         ],
         "bindings": [
           1794
+        ]
+      },
+      "232": {
+        "clusters": [
+          0,
+          21,
+          64512
+        ],
+        "bindings": [
+          3,
+          25
+        ]
+      },
+      "242": {
+        "clusters": [
+          33
+        ],
+        "bindings": [
+          33
         ]
       }
     },
@@ -63,9 +103,19 @@
         "en": "The device will search for an open ZigBee network to join when you first apply power to it.\n\n S2-R also offers a push-button behind a tiny hole in the front-face of the device in order to start the inclusion manually.",
         "nl": "De module zal, zodra deze is voorzien van stroom, op zoek gaan naar een ZigBee netwerk.\n\n S2-R kan ook aan een ZigBee network worden toegevoegd door een knopje in een klein gaatje aan de voorkant van de module kort in te drukken."
       }
+    },
+    "devices": {
+      "secondSwitch": {
+        "capabilities": [
+          "onoff"
+        ],
+        "name": {
+          "en": "S2 RAILSWITCH SW2"
+        }
+      }
     }
   },
   "settings": [
-    
+
   ]
 }

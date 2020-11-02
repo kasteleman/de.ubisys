@@ -11,9 +11,7 @@
   "license": "ISC",
   "homepage": "https://github.com/kasteleman/de.ubisys",
   "dependencies": {
-    "@athombv/data-types": "^1.0.4",
-    "homey-log": "^2.0.1",
-    "homey-zigbeedriver": "^1.6.1",
+    "homey-zigbeedriver": "^1.6.2",
     "zigbee-clusters": "^1.4.0"
   },
   "keywords": [
