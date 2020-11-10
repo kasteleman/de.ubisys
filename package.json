@@ -3,7 +3,17 @@
   "version": "1.0.2",
   "description": "This app allows you to connect your Ubisys Smart Home Devices to Homey",
   "main": "app.js",
-  "devDependencies": {},
+  "engines": {
+    "node": ">=12.16.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-athom": "^2.1.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kasteleman/de.ubisys.git"
