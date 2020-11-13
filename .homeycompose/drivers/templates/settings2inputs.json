@@ -1,0 +1,62 @@
+{
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+        "en": "Settings"
+      },
+      "children": [
+        {
+          "id": "inputaction1",
+          "type": "dropdown",
+          "value": "ShortClickToggle",
+          "label": {
+            "en": "Actions input 1"
+          },
+          "hint": {
+            "en": "Select actions controlled by input 1 on the device."
+          },
+          "values": [
+            {
+              "id": "ShortClickToggle",
+              "label": {
+                "en": "Short-click toggle"
+              }
+            },
+            {
+              "id": "ShortClickToggleLongClickDim",
+              "label": {
+                "en": "Short-click toggle, long-click dim"
+              }
+            }
+          ]
+        },
+        {
+          "id": "inputaction2",
+          "type": "dropdown",
+          "value": "ShortClickToggle",
+          "label": {
+            "en": "Actions input 2"
+          },
+          "hint": {
+            "en": "Select actions controlled by input 2 on the device."
+          },
+          "values": [
+            {
+              "id": "ShortClickToggle",
+              "label": {
+                "en": "Short-click toggle"
+              }
+            },
+            {
+              "id": "ShortClickToggleLongClickDim",
+              "label": {
+                "en": "Short-click toggle, long-click dim"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
