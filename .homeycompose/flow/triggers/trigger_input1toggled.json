@@ -1,7 +1,7 @@
 {
-    "id": "sw1movedown",
+    "id": "input1toggled",
     "title": {
-        "en": "Input 1 - Decrease relative dim-level"
+        "en": "Input 1 - Toggle on or off"
     },
     "args": [
         {

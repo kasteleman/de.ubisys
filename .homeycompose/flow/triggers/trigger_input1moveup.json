@@ -1,14 +1,14 @@
 {
-    "id": "sw2moveup",
+    "id": "input1moveup",
     "title": {
-        "en": "Input 2 - Increase relative dim-level"
+        "en": "Input 1 - Increase relative dim-level"
     },
     "args": [
         {
             "name": "device",
             "type": "device",
             "filter": {
-                "driver_id": "D1_5503|D1R_5503|S1R_5501|S2_5502|S2R_5502",
+                "driver_id": "D1_5503|D1R_5503|S1_5501|S1R_5501|S2_5502|S2R_5502",
                 "capabilities": "measure_power"
             }
         }
