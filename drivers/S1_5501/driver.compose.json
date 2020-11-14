@@ -82,7 +82,7 @@
       }
     }
   },
-  "settings": [
-
+  "$extends": [
+    "settings1input"
   ]
 }

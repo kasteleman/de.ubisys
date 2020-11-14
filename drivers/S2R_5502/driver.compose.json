@@ -111,11 +111,12 @@
         ],
         "name": {
           "en": "S2 RAILSWITCH SW2"
-        }
+        },
+        "settings": []
       }
     }
   },
-  "settings": [
-
+  "$extends": [
+    "settings2inputs"
   ]
 }

@@ -1,0 +1,208 @@
+{
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+        "en": "Settings"
+      },
+      "children": [
+        {
+          "id": "inputaction1",
+          "type": "dropdown",
+          "value": "ShortClickToggle",
+          "label": {
+            "en": "Actions input 1"
+          },
+          "hint": {
+            "en": "Select actions controlled by input 1 on the device. \n\nNOTE 1: The \"Dual\" option will use both input 1 and input 2 to control output 1 and will trigger Flow cards named \"Input 1\". Input 1 is used for \"On\" and \"Dim up\". Input 2 is used for \"Off\" and \"Dim down\". No Flow cards named \"Input 2\" will be triggered. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNOTE 2: If a \"Scene selector\" option is selected, the input will not control the output and no Flow cards will be triggered.\n\nNOTE 3: For the \"Stationary switch as selector\", the primary scene is recalled in \"On\" state and the secondary scene is recalled in \"Off\" state. For the \"Momentary switch as selector\", the primary scene is recalled with short-click and the secondary scene is recalled with long-click."
+          },
+          "values": [
+            {
+              "id": "ShortClickToggle",
+              "label": {
+                "en": "Short-click toggle"
+              }
+            },
+            {
+              "id": "ShortClickToggleLongClickDim",
+              "label": {
+                "en": "Short-click toggle, long-click dim"
+              }
+            },
+            {
+              "id": "DualShortClickOnOffLongClickDim",
+              "label": {
+                "en": "Dual short-click on/off, long-click dim"
+              }
+            },
+            {
+              "id": "StationarySwitchSceneSelector",
+              "label": {
+                "en": "Stationary switch as scene selector"
+              }
+            },
+            {
+              "id": "MomentarySwitchSceneSelector",
+              "label": {
+                "en": "Momentary switch as scene selector"
+              }
+            },
+            {
+              "id": "None",
+              "label": {
+                "en": "No actions"
+              }
+            }
+          ]
+        },
+        {
+          "id": "inputaction2",
+          "type": "dropdown",
+          "value": "ShortClickToggle",
+          "label": {
+            "en": "Actions input 2"
+          },
+          "hint": {
+            "en": "Select actions controlled by input 2 on the device. \n\nNOTE 1: If the \"Dual\" option is selected for input 1, the selection for input 2 will have no effect. No Flow cards named \"Input 2\" will be triggered. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNOTE 2: If a \"Scene selector\" option is selected, the input will not control the output and no Flow cards will be triggered.\n\nNOTE 3: For the \"Stationary switch as selector\", the primary scene is recalled in \"On\" state and the secondary scene is recalled in \"Off\" state. For the \"Momentary switch as selector\", the primary scene is recalled with short-click and the secondary scene is recalled with long-click."
+          },
+          "values": [
+            {
+              "id": "ShortClickToggle",
+              "label": {
+                "en": "Short-click toggle"
+              }
+            },
+            {
+              "id": "ShortClickToggleLongClickDim",
+              "label": {
+                "en": "Short-click toggle, long-click dim"
+              }
+            },
+            {
+              "id": "StationarySwitchSceneSelector",
+              "label": {
+                "en": "Stationary switch as scene selector"
+              }
+            },
+            {
+              "id": "MomentarySwitchSceneSelector",
+              "label": {
+                "en": "Momentary switch as scene selector"
+              }
+            },
+            {
+              "id": "None",
+              "label": {
+                "en": "No actions"
+              }
+            }
+          ]
+        },
+        {
+          "id": "group1a",
+          "type": "number",
+              "label": {
+                "en": "Primary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+          "hint": {
+            "en": "Group ID for Input actions with Scene Selection."
+          }
+        },
+        {
+          "id": "scene1a",
+          "type": "number",
+              "label": {
+                "en": "Primary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+          "hint": {
+            "en": "Scene ID for Input actions with Scene Selection."
+          }
+        },
+        {
+          "id": "group1b",
+          "type": "number",
+              "label": {
+                "en": "Secondary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+          "hint": {
+            "en": "Group ID for Input actions with Scene Selection."
+          }
+        },
+        {
+          "id": "scene1b",
+          "type": "number",
+              "label": {
+                "en": "Secondary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+          "hint": {
+            "en": "Scene ID for Input actions with Scene Selection."
+          }
+        },
+        {
+          "id": "group2a",
+          "type": "number",
+              "label": {
+                "en": "Primary Group ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+          "hint": {
+            "en": "Group ID for Input actions with Scene Selection."
+          }
+        },
+        {
+          "id": "scene2a",
+          "type": "number",
+              "label": {
+                "en": "Primary Scene ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+          "hint": {
+            "en": "Scene ID for Input actions with Scene Selection."
+          }
+        },
+        {
+          "id": "group2b",
+          "type": "number",
+              "label": {
+                "en": "Secondary Group ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+          "hint": {
+            "en": "Group ID for Input actions with Scene Selection."
+          }
+        },
+        {
+          "id": "scene2b",
+          "type": "number",
+              "label": {
+                "en": "Secondary Scene ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+          "hint": {
+            "en": "Scene ID for Input actions with Scene Selection."
+          }
+        }
+      ]
+    }
+  ]
+}
