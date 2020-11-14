@@ -28,6 +28,12 @@
               "label": {
                 "en": "Short-click toggle, long-click dim"
               }
+            },
+            {
+              "id": "None",
+              "label": {
+                "en": "No actions"
+              }
             }
           ]
         }

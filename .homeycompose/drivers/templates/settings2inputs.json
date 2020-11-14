@@ -14,7 +14,7 @@
             "en": "Actions input 1"
           },
           "hint": {
-            "en": "Select actions controlled by input 1 on the device."
+            "en": "Select actions controlled by input 1 on the device. \n\nNOTE: The \"Dual\" option will use both input 1 and input 2 to control output 1 and will trigger Flow cards named \"Input 1\". No Flow cards named \"Input 2\" will be triggered. For devices with two outputs, output 2 will not be controlled by input 2."
           },
           "values": [
             {
@@ -27,6 +27,18 @@
               "id": "ShortClickToggleLongClickDim",
               "label": {
                 "en": "Short-click toggle, long-click dim"
+              }
+            },
+            {
+              "id": "DualShortClickOnOffLongClickDim",
+              "label": {
+                "en": "Dual short-click on/off, long-click dim"
+              }
+            },
+            {
+              "id": "None",
+              "label": {
+                "en": "No actions"
               }
             }
           ]
@@ -39,7 +51,7 @@
             "en": "Actions input 2"
           },
           "hint": {
-            "en": "Select actions controlled by input 2 on the device."
+            "en": "Select actions controlled by input 2 on the device. \n\nNOTE: If the \"Dual\" option is selected for input 1, the selection for input 2 will have no effect. No Flow cards named \"Input 2\" will be triggered. For devices with two outputs, output 2 will not be controlled by input 2."
           },
           "values": [
             {
@@ -52,6 +64,12 @@
               "id": "ShortClickToggleLongClickDim",
               "label": {
                 "en": "Short-click toggle, long-click dim"
+              }
+            },
+            {
+              "id": "None",
+              "label": {
+                "en": "No actions"
               }
             }
           ]
