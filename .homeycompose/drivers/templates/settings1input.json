@@ -14,7 +14,7 @@
             "en": "Actions input 1"
           },
           "hint": {
-            "en": "Select actions controlled by input 1 on the device."
+            "en": "Select actions controlled by input 1 on the device. \n\nNOTE 1: If a \"Scene selector\" option is selected, the input will not control the output. And no Flow cards will be triggered.\n\nNOTE 2: For the \"Stationary switch as selector\", the primary scene is recalled in \"On\" state and the secondary scene is recalled in \"Off\" state. For the \"Momentary switch as selector\", the primary scene is recalled with short-click and the secondary scene is recalled with long-click."
           },
           "values": [
             {
@@ -30,13 +30,77 @@
               }
             },
             {
+              "id": "StationarySwitchSceneSelector",
+              "label": {
+                "en": "Stationary switch as scene selector"
+              }
+            },
+            {
+              "id": "MomentarySwitchSceneSelector",
+              "label": {
+                "en": "Momentary switch as scene selector"
+              }
+            },
+            {
               "id": "None",
               "label": {
                 "en": "No actions"
               }
             }
           ]
-        }
+        },
+        {
+          "id": "group1a",
+          "type": "number",
+              "label": {
+                "en": "Primary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+          "hint": {
+            "en": "Group ID for Input actions with Scene Selection."
+          }
+        },
+        {
+          "id": "scene1a",
+          "type": "number",
+              "label": {
+                "en": "Primary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+          "hint": {
+            "en": "Scene ID for Input actions with Scene Selection."
+          }
+        },
+        {
+          "id": "group1b",
+          "type": "number",
+              "label": {
+                "en": "Secondary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+          "hint": {
+            "en": "Group ID for Input actions with Scene Selection."
+          }
+        },
+        {
+          "id": "scene1b",
+          "type": "number",
+              "label": {
+                "en": "Secondary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+          "hint": {
+            "en": "Scene ID for Input actions with Scene Selection."
+          }
+        }      
       ]
     }
   ]
