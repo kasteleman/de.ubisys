@@ -14,25 +14,37 @@
             "en": "Actions input 1"
           },
           "hint": {
-            "en": "Select actions controlled by input 1 on the device. \n\nNOTE 1: The \"Dual\" option will use both input 1 and input 2 to control output 1 and will trigger Flow cards named \"Input 1\". Input 1 is used for \"On\" and \"Dim up\". Input 2 is used for \"Off\" and \"Dim down\". No Flow cards named \"Input 2\" will be triggered. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNOTE 2: If a \"Scene selector\" option is selected, the input will not control the output and no Flow cards will be triggered.\n\nNOTE 3: For the \"Stationary switch as selector\", the primary scene is recalled in \"On\" state and the secondary scene is recalled in \"Off\" state. For the \"Momentary switch as selector\", the primary scene is recalled with short-click and the secondary scene is recalled with long-click."
+            "en": "Select actions controlled by input 1 on the device.\n\nDepending on the actions, the input will have different impacts on the output, and different Flow cards named \"Input 1\" will be triggered.\n\nTriggers:\n\nInput 1 - Set on\n  Triggered by \"on/off switch\"\nInput 1 - Set off\n  Triggered by \"on/off switch\"\nInput 1 - Toggle on or off\n  Triggered by \"toggle switch\" and \"dimmer switch\"\nInput 1 - Increase relative dim-level\n  Triggered by \"dimmer switch\"\nInput 1 - Decrease relative dim-level\n  Triggered by \"dimmer switch\"\n\nNOTE 1: For \"Push button as dimmer switch\", a short press will toggle, a long press will (alternately) dim up or down.\n\nNOTE 2: For \"Dual push buttons as dimmer switch\", a short press on input 1 will turn on, a short press on input 2 will turn off, a long press on input 1 will dim up and a long press on input 2 will dim down. Only Flow cards named \"Input 1\" will be triggered by the inputs. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNote 3: For the \"dimmer switch\" options, the app will trigger \"Increase/decrease relative dim-level\" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the \"When...\" part of a Homey flow and then use a \"Set relative dim-level\" card in the \"Then...\" part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%.\n\nNOTE 4: For \"Stationary switch as scene selector\", the primary scene is recalled in the \"On\" state and the secondary scene is recalled in the \"Off\" state. For \"Push button as scene selector\", the primary scene is recalled with short press and the secondary scene is recalled with long press. The inputs will not control the outputs and no Flow cards will be triggered by the inputs.\n"
           },
           "values": [
             {
+              "id": "StationarySwitchToggle",
+              "label": {
+                "en": "Stationary switch as toggle switch"
+              }
+            },
+            {
+              "id": "StationarySwitchOnOff",
+              "label": {
+                "en": "Stationary switch as on/off switch"
+              }
+            },
+            {
               "id": "ShortClickToggle",
               "label": {
-                "en": "Short-click toggle"
+                "en": "Push button as toggle switch"
               }
             },
             {
               "id": "ShortClickToggleLongClickDim",
               "label": {
-                "en": "Short-click toggle, long-click dim"
+                "en": "Push button as dimmer switch"
               }
             },
             {
               "id": "DualShortClickOnOffLongClickDim",
               "label": {
-                "en": "Dual short-click on/off, long-click dim"
+                "en": "Dual push buttons as dimmer switch"
               }
             },
             {
@@ -44,7 +56,7 @@
             {
               "id": "MomentarySwitchSceneSelector",
               "label": {
-                "en": "Momentary switch as scene selector"
+                "en": "Push button as scene selector"
               }
             },
             {
@@ -63,19 +75,31 @@
             "en": "Actions input 2"
           },
           "hint": {
-            "en": "Select actions controlled by input 2 on the device. \n\nNOTE 1: If the \"Dual\" option is selected for input 1, the selection for input 2 will have no effect. No Flow cards named \"Input 2\" will be triggered. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNOTE 2: If a \"Scene selector\" option is selected, the input will not control the output and no Flow cards will be triggered.\n\nNOTE 3: For the \"Stationary switch as selector\", the primary scene is recalled in \"On\" state and the secondary scene is recalled in \"Off\" state. For the \"Momentary switch as selector\", the primary scene is recalled with short-click and the secondary scene is recalled with long-click."
+            "en": "Select actions controlled by input 2 on the device.\n\nDepending on the actions, the input will have different impacts on the output, and different Flow cards named \"Input 2\" will be triggered.\n\nTriggers:\n\nInput 2 - Set on\n  Triggered by \"on/off switch\"\nInput 2 - Set off\n  Triggered by \"on/off switch\"\nInput 2 - Toggle on or off\n  Triggered by \"toggle switch\" and \"dimmer switch\"\nInput 2 - Increase relative dim-level\n  Triggered by \"dimmer switch\"\nInput 2 - Decrease relative dim-level\n  Triggered by \"dimmer switch\"\n\nNOTE 1: If the \"Dual push buttons as dimmer switch\" option is selected for input 1, the selection for input 2 will have no effect. No Flow cards named \"Input 2\" will be triggered. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNote 2: For the \"dimmer switch\" options, the app will trigger \"Increase/decrease relative dim-level\" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the \"When...\" part of a Homey flow and then use a \"Set relative dim-level\" card in the \"Then...\" part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%.\n\nNOTE 3: For \"Stationary switch as scene selector\", the primary scene is recalled in the \"On\" state and the secondary scene is recalled in the \"Off\" state. For \"Push button as scene selector\", the primary scene is recalled with short press and the secondary scene is recalled with long press. The inputs will not control the outputs and no Flow cards will be triggered by the inputs.\n"
           },
           "values": [
             {
+              "id": "StationarySwitchToggle",
+              "label": {
+                "en": "Stationary switch as toggle switch"
+              }
+            },
+            {
+              "id": "StationarySwitchOnOff",
+              "label": {
+                "en": "Stationary switch as on/off switch"
+              }
+            },
+            {
               "id": "ShortClickToggle",
               "label": {
-                "en": "Short-click toggle"
+                "en": "Push button as toggle switch"
               }
             },
             {
               "id": "ShortClickToggleLongClickDim",
               "label": {
-                "en": "Short-click toggle, long-click dim"
+                "en": "Push button as dimmer switch"
               }
             },
             {
@@ -87,7 +111,7 @@
             {
               "id": "MomentarySwitchSceneSelector",
               "label": {
-                "en": "Momentary switch as scene selector"
+                "en": "Push button as scene selector"
               }
             },
             {
