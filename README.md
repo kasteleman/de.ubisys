@@ -25,7 +25,7 @@ The Ubisys devices have one output part and one input part.
 
 The output part consists of a dimmer unit (D1 and D1R devices) or switch units (S1, S1R, S2 and S2R devices). The output part can be controlled from Homey with the usual flow cards, e.g.
 * When... "Turned on"
-* When... "Is turned on"
+* And... "Is turned on"
 * Then... "Turn on"
 
 The input part can be connected to physical switches. By default, the input part is configured to control the output part. E.g., a physical switch connected to input 1 will turn on and off output 1 of the device. However, it is possible to configure the device to change this behaviour.
@@ -51,7 +51,7 @@ For "Push button as dimmer switch", a short press will toggle, a long press will
 
 For "Dual push buttons as dimmer switch", a short press on input 1 will turn on, a short press on input 2 will turn off, a long press on input 1 will dim up and a long press on input 2 will dim down. Only Flow cards named "Input 1" will be triggered by the inputs. For devices with two outputs, output 2 will not be controlled by input 2.
 
-For the "dimmer switch" options, the app will trigger "Increase/decrease relative dim-level" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the "When..." part of a Homey flow and then use a "Set relative dim-level" card in the "Then..." part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%.
+For the "dimmer switch" options, the app will trigger "Increase/decrease relative dim-level" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the "When..." part of a Homey flow and then use a "Set relative dim-level" card in the "Then..." part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%. The reason for the 800 ms interval is that Homey seems to have a debounce function that removes triggers if you send too many.
 
 For "Stationary switch as scene selector", the primary scene is recalled in the "On" state and the secondary scene is recalled in the "Off" state. For "Push button as scene selector", the primary scene is recalled with short press and the secondary scene is recalled with long press. The inputs will not control the outputs and no Flow cards will be triggered by the inputs. Note that configurations of scenes in the Zigbee network is assumed to be done with some other app or tool.
 
