@@ -14,19 +14,31 @@
             "en": "Actions input 1"
           },
           "hint": {
-            "en": "Select actions controlled by input 1 on the device. \n\nNOTE 1: If a \"Scene selector\" option is selected, the input will not control the output. And no Flow cards will be triggered.\n\nNOTE 2: For the \"Stationary switch as selector\", the primary scene is recalled in \"On\" state and the secondary scene is recalled in \"Off\" state. For the \"Momentary switch as selector\", the primary scene is recalled with short-click and the secondary scene is recalled with long-click."
+            "en": "Select actions controlled by input 1 on the device.\n\nDepending on the actions, the input will have different impacts on the output, and different Flow cards named \"Input 1\" will be triggered.\n\nTriggers:\n\nInput 1 - Set on\n  Triggered by \"on/off switch\"\nInput 1 - Set off\n  Triggered by \"on/off switch\"\nInput 1 - Toggle on or off\n  Triggered by \"toggle switch\" and \"dimmer switch\"\nInput 1 - Increase relative dim-level\n  Triggered by \"dimmer switch\"\nInput 1 - Decrease relative dim-level\n  Triggered by \"dimmer switch\"\n\nNote 3: For the \"dimmer switch\" option, the app will trigger \"Increase/decrease relative dim-level\" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the \"When...\" part of a Homey flow and then use a \"Set relative dim-level\" card in the \"Then...\" part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%.\n\nNOTE 2: For \"Stationary switch as scene selector\", the primary scene is recalled in the \"On\" state and the secondary scene is recalled in the \"Off\" state. For \"Push button as scene selector\", the primary scene is recalled with short press and the secondary scene is recalled with long press. The inputs will not control the outputs and no Flow cards will be triggered by the inputs.\n"
           },
           "values": [
             {
+              "id": "StationarySwitchToggle",
+              "label": {
+                "en": "Stationary switch as toggle switch"
+              }
+            },
+            {
+              "id": "StationarySwitchOnOff",
+              "label": {
+                "en": "Stationary switch as on/off switch"
+              }
+            },
+            {
               "id": "ShortClickToggle",
               "label": {
-                "en": "Short-click toggle"
+                "en": "Push button as toggle switch"
               }
             },
             {
               "id": "ShortClickToggleLongClickDim",
               "label": {
-                "en": "Short-click toggle, long-click dim"
+                "en": "Push button as dimmer switch"
               }
             },
             {
@@ -38,7 +50,7 @@
             {
               "id": "MomentarySwitchSceneSelector",
               "label": {
-                "en": "Momentary switch as scene selector"
+                "en": "Push button as scene selector"
               }
             },
             {

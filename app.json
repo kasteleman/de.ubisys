@@ -20,6 +20,10 @@
       {
         "name": "Richard Barkestam",
         "email": "richard@barkestam.se"
+      },
+      {
+        "name": "Jonas Karlsson",
+        "email": "jonas.b.karlsson@gmail.com"
       }
     ]
   },
@@ -34,8 +38,402 @@
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"
   },
+  "flow": {
+    "triggers": [
+      {
+        "id": "input1movedown",
+        "title": {
+          "en": "Input 1 - Decrease relative dim-level"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": {
+              "driver_id": "D1_5503|D1R_5503|S1_5501|S1R_5501|S2_5502|S2R_5502",
+              "capabilities": "measure_power"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input1moveup",
+        "title": {
+          "en": "Input 1 - Increase relative dim-level"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": {
+              "driver_id": "D1_5503|D1R_5503|S1_5501|S1R_5501|S2_5502|S2R_5502",
+              "capabilities": "measure_power"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input1setoff",
+        "title": {
+          "en": "Input 1 - Set off"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": {
+              "driver_id": "D1_5503|D1R_5503|S1_5501|S1R_5501|S2_5502|S2R_5502",
+              "capabilities": "measure_power"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input1seton",
+        "title": {
+          "en": "Input 1 - Set on"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": {
+              "driver_id": "D1_5503|D1R_5503|S1_5501|S1R_5501|S2_5502|S2R_5502",
+              "capabilities": "measure_power"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input1toggled",
+        "title": {
+          "en": "Input 1 - Toggle on or off"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": {
+              "driver_id": "D1_5503|D1R_5503|S1_5501|S1R_5501|S2_5502|S2R_5502",
+              "capabilities": "measure_power"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input2movedown",
+        "title": {
+          "en": "Input 2 - Decrease relative dim-level"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": {
+              "driver_id": "D1_5503|D1R_5503|S1_5501|S1R_5501|S2_5502|S2R_5502",
+              "capabilities": "measure_power"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input2moveup",
+        "title": {
+          "en": "Input 2 - Increase relative dim-level"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": {
+              "driver_id": "D1_5503|D1R_5503|S1R_5501|S2_5502|S2R_5502",
+              "capabilities": "measure_power"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input2setoff",
+        "title": {
+          "en": "Input 2 - Set off"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": {
+              "driver_id": "D1_5503|D1R_5503|S1R_5501|S2_5502|S2R_5502",
+              "capabilities": "measure_power"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input2seton",
+        "title": {
+          "en": "Input 2 - Set on"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": {
+              "driver_id": "D1_5503|D1R_5503|S1R_5501|S2_5502|S2R_5502",
+              "capabilities": "measure_power"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input2toggled",
+        "title": {
+          "en": "Input 2 - Toggle on or off"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": {
+              "driver_id": "D1_5503|D1R_5503|S1R_5501|S2_5502|S2R_5502",
+              "capabilities": "measure_power"
+            }
+          }
+        ]
+      }
+    ]
+  },
   "drivers": [
     {
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Settings"
+          },
+          "children": [
+            {
+              "id": "inputaction1",
+              "type": "dropdown",
+              "value": "ShortClickToggle",
+              "label": {
+                "en": "Actions input 1"
+              },
+              "hint": {
+                "en": "Select actions controlled by input 1 on the device.\n\nDepending on the actions, the input will have different impacts on the output, and different Flow cards named \"Input 1\" will be triggered.\n\nTriggers:\n\nInput 1 - Set on\n  Triggered by \"on/off switch\"\nInput 1 - Set off\n  Triggered by \"on/off switch\"\nInput 1 - Toggle on or off\n  Triggered by \"toggle switch\" and \"dimmer switch\"\nInput 1 - Increase relative dim-level\n  Triggered by \"dimmer switch\"\nInput 1 - Decrease relative dim-level\n  Triggered by \"dimmer switch\"\n\nNOTE 1: For \"Push button as dimmer switch\", a short press will toggle, a long press will (alternately) dim up or down.\n\nNOTE 2: For \"Dual push buttons as dimmer switch\", a short press on input 1 will turn on, a short press on input 2 will turn off, a long press on input 1 will dim up and a long press on input 2 will dim down. Only Flow cards named \"Input 1\" will be triggered by the inputs. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNote 3: For the \"dimmer switch\" options, the app will trigger \"Increase/decrease relative dim-level\" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the \"When...\" part of a Homey flow and then use a \"Set relative dim-level\" card in the \"Then...\" part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%.\n\nNOTE 4: For \"Stationary switch as scene selector\", the primary scene is recalled in the \"On\" state and the secondary scene is recalled in the \"Off\" state. For \"Push button as scene selector\", the primary scene is recalled with short press and the secondary scene is recalled with long press. The inputs will not control the outputs and no Flow cards will be triggered by the inputs.\n"
+              },
+              "values": [
+                {
+                  "id": "StationarySwitchToggle",
+                  "label": {
+                    "en": "Stationary switch as toggle switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchOnOff",
+                  "label": {
+                    "en": "Stationary switch as on/off switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggle",
+                  "label": {
+                    "en": "Push button as toggle switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggleLongClickDim",
+                  "label": {
+                    "en": "Push button as dimmer switch"
+                  }
+                },
+                {
+                  "id": "DualShortClickOnOffLongClickDim",
+                  "label": {
+                    "en": "Dual push buttons as dimmer switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchSceneSelector",
+                  "label": {
+                    "en": "Stationary switch as scene selector"
+                  }
+                },
+                {
+                  "id": "MomentarySwitchSceneSelector",
+                  "label": {
+                    "en": "Push button as scene selector"
+                  }
+                },
+                {
+                  "id": "None",
+                  "label": {
+                    "en": "No actions"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "inputaction2",
+              "type": "dropdown",
+              "value": "ShortClickToggle",
+              "label": {
+                "en": "Actions input 2"
+              },
+              "hint": {
+                "en": "Select actions controlled by input 2 on the device.\n\nDepending on the actions, the input will have different impacts on the output, and different Flow cards named \"Input 2\" will be triggered.\n\nTriggers:\n\nInput 2 - Set on\n  Triggered by \"on/off switch\"\nInput 2 - Set off\n  Triggered by \"on/off switch\"\nInput 2 - Toggle on or off\n  Triggered by \"toggle switch\" and \"dimmer switch\"\nInput 2 - Increase relative dim-level\n  Triggered by \"dimmer switch\"\nInput 2 - Decrease relative dim-level\n  Triggered by \"dimmer switch\"\n\nNOTE 1: If the \"Dual push buttons as dimmer switch\" option is selected for input 1, the selection for input 2 will have no effect. No Flow cards named \"Input 2\" will be triggered. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNote 2: For the \"dimmer switch\" options, the app will trigger \"Increase/decrease relative dim-level\" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the \"When...\" part of a Homey flow and then use a \"Set relative dim-level\" card in the \"Then...\" part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%.\n\nNOTE 3: For \"Stationary switch as scene selector\", the primary scene is recalled in the \"On\" state and the secondary scene is recalled in the \"Off\" state. For \"Push button as scene selector\", the primary scene is recalled with short press and the secondary scene is recalled with long press. The inputs will not control the outputs and no Flow cards will be triggered by the inputs.\n"
+              },
+              "values": [
+                {
+                  "id": "StationarySwitchToggle",
+                  "label": {
+                    "en": "Stationary switch as toggle switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchOnOff",
+                  "label": {
+                    "en": "Stationary switch as on/off switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggle",
+                  "label": {
+                    "en": "Push button as toggle switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggleLongClickDim",
+                  "label": {
+                    "en": "Push button as dimmer switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchSceneSelector",
+                  "label": {
+                    "en": "Stationary switch as scene selector"
+                  }
+                },
+                {
+                  "id": "MomentarySwitchSceneSelector",
+                  "label": {
+                    "en": "Push button as scene selector"
+                  }
+                },
+                {
+                  "id": "None",
+                  "label": {
+                    "en": "No actions"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "group1a",
+              "type": "number",
+              "label": {
+                "en": "Primary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene1a",
+              "type": "number",
+              "label": {
+                "en": "Primary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group1b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene1b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group2a",
+              "type": "number",
+              "label": {
+                "en": "Primary Group ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene2a",
+              "type": "number",
+              "label": {
+                "en": "Primary Scene ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group2b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Group ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene2b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Scene ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            }
+          ]
+        }
+      ],
       "name": {
         "en": "D1-R RAILDIMMER"
       },
@@ -78,7 +476,10 @@
               769,
               64513
             ],
-            "bindings": []
+            "bindings": [
+              6,
+              8
+            ]
           },
           "2": {
             "clusters": [
@@ -108,7 +509,9 @@
               1794,
               2820
             ],
-            "bindings": []
+            "bindings": [
+              1794
+            ]
           },
           "232": {
             "clusters": [
@@ -137,10 +540,239 @@
           }
         }
       },
-      "settings": [],
       "id": "D1R_5503"
     },
     {
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Settings"
+          },
+          "children": [
+            {
+              "id": "inputaction1",
+              "type": "dropdown",
+              "value": "ShortClickToggle",
+              "label": {
+                "en": "Actions input 1"
+              },
+              "hint": {
+                "en": "Select actions controlled by input 1 on the device.\n\nDepending on the actions, the input will have different impacts on the output, and different Flow cards named \"Input 1\" will be triggered.\n\nTriggers:\n\nInput 1 - Set on\n  Triggered by \"on/off switch\"\nInput 1 - Set off\n  Triggered by \"on/off switch\"\nInput 1 - Toggle on or off\n  Triggered by \"toggle switch\" and \"dimmer switch\"\nInput 1 - Increase relative dim-level\n  Triggered by \"dimmer switch\"\nInput 1 - Decrease relative dim-level\n  Triggered by \"dimmer switch\"\n\nNOTE 1: For \"Push button as dimmer switch\", a short press will toggle, a long press will (alternately) dim up or down.\n\nNOTE 2: For \"Dual push buttons as dimmer switch\", a short press on input 1 will turn on, a short press on input 2 will turn off, a long press on input 1 will dim up and a long press on input 2 will dim down. Only Flow cards named \"Input 1\" will be triggered by the inputs. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNote 3: For the \"dimmer switch\" options, the app will trigger \"Increase/decrease relative dim-level\" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the \"When...\" part of a Homey flow and then use a \"Set relative dim-level\" card in the \"Then...\" part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%.\n\nNOTE 4: For \"Stationary switch as scene selector\", the primary scene is recalled in the \"On\" state and the secondary scene is recalled in the \"Off\" state. For \"Push button as scene selector\", the primary scene is recalled with short press and the secondary scene is recalled with long press. The inputs will not control the outputs and no Flow cards will be triggered by the inputs.\n"
+              },
+              "values": [
+                {
+                  "id": "StationarySwitchToggle",
+                  "label": {
+                    "en": "Stationary switch as toggle switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchOnOff",
+                  "label": {
+                    "en": "Stationary switch as on/off switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggle",
+                  "label": {
+                    "en": "Push button as toggle switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggleLongClickDim",
+                  "label": {
+                    "en": "Push button as dimmer switch"
+                  }
+                },
+                {
+                  "id": "DualShortClickOnOffLongClickDim",
+                  "label": {
+                    "en": "Dual push buttons as dimmer switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchSceneSelector",
+                  "label": {
+                    "en": "Stationary switch as scene selector"
+                  }
+                },
+                {
+                  "id": "MomentarySwitchSceneSelector",
+                  "label": {
+                    "en": "Push button as scene selector"
+                  }
+                },
+                {
+                  "id": "None",
+                  "label": {
+                    "en": "No actions"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "inputaction2",
+              "type": "dropdown",
+              "value": "ShortClickToggle",
+              "label": {
+                "en": "Actions input 2"
+              },
+              "hint": {
+                "en": "Select actions controlled by input 2 on the device.\n\nDepending on the actions, the input will have different impacts on the output, and different Flow cards named \"Input 2\" will be triggered.\n\nTriggers:\n\nInput 2 - Set on\n  Triggered by \"on/off switch\"\nInput 2 - Set off\n  Triggered by \"on/off switch\"\nInput 2 - Toggle on or off\n  Triggered by \"toggle switch\" and \"dimmer switch\"\nInput 2 - Increase relative dim-level\n  Triggered by \"dimmer switch\"\nInput 2 - Decrease relative dim-level\n  Triggered by \"dimmer switch\"\n\nNOTE 1: If the \"Dual push buttons as dimmer switch\" option is selected for input 1, the selection for input 2 will have no effect. No Flow cards named \"Input 2\" will be triggered. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNote 2: For the \"dimmer switch\" options, the app will trigger \"Increase/decrease relative dim-level\" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the \"When...\" part of a Homey flow and then use a \"Set relative dim-level\" card in the \"Then...\" part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%.\n\nNOTE 3: For \"Stationary switch as scene selector\", the primary scene is recalled in the \"On\" state and the secondary scene is recalled in the \"Off\" state. For \"Push button as scene selector\", the primary scene is recalled with short press and the secondary scene is recalled with long press. The inputs will not control the outputs and no Flow cards will be triggered by the inputs.\n"
+              },
+              "values": [
+                {
+                  "id": "StationarySwitchToggle",
+                  "label": {
+                    "en": "Stationary switch as toggle switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchOnOff",
+                  "label": {
+                    "en": "Stationary switch as on/off switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggle",
+                  "label": {
+                    "en": "Push button as toggle switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggleLongClickDim",
+                  "label": {
+                    "en": "Push button as dimmer switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchSceneSelector",
+                  "label": {
+                    "en": "Stationary switch as scene selector"
+                  }
+                },
+                {
+                  "id": "MomentarySwitchSceneSelector",
+                  "label": {
+                    "en": "Push button as scene selector"
+                  }
+                },
+                {
+                  "id": "None",
+                  "label": {
+                    "en": "No actions"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "group1a",
+              "type": "number",
+              "label": {
+                "en": "Primary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene1a",
+              "type": "number",
+              "label": {
+                "en": "Primary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group1b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene1b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group2a",
+              "type": "number",
+              "label": {
+                "en": "Primary Group ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene2a",
+              "type": "number",
+              "label": {
+                "en": "Primary Scene ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group2b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Group ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene2b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Scene ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            }
+          ]
+        }
+      ],
       "name": {
         "en": "D1 DIMMER"
       },
@@ -183,7 +815,10 @@
               769,
               64513
             ],
-            "bindings": []
+            "bindings": [
+              6,
+              8
+            ]
           },
           "2": {
             "clusters": [
@@ -213,7 +848,9 @@
               1794,
               2820
             ],
-            "bindings": []
+            "bindings": [
+              1794
+            ]
           },
           "232": {
             "clusters": [
@@ -242,10 +879,239 @@
           }
         }
       },
-      "settings": [],
       "id": "D1_5503"
     },
     {
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Settings"
+          },
+          "children": [
+            {
+              "id": "inputaction1",
+              "type": "dropdown",
+              "value": "ShortClickToggle",
+              "label": {
+                "en": "Actions input 1"
+              },
+              "hint": {
+                "en": "Select actions controlled by input 1 on the device.\n\nDepending on the actions, the input will have different impacts on the output, and different Flow cards named \"Input 1\" will be triggered.\n\nTriggers:\n\nInput 1 - Set on\n  Triggered by \"on/off switch\"\nInput 1 - Set off\n  Triggered by \"on/off switch\"\nInput 1 - Toggle on or off\n  Triggered by \"toggle switch\" and \"dimmer switch\"\nInput 1 - Increase relative dim-level\n  Triggered by \"dimmer switch\"\nInput 1 - Decrease relative dim-level\n  Triggered by \"dimmer switch\"\n\nNOTE 1: For \"Push button as dimmer switch\", a short press will toggle, a long press will (alternately) dim up or down.\n\nNOTE 2: For \"Dual push buttons as dimmer switch\", a short press on input 1 will turn on, a short press on input 2 will turn off, a long press on input 1 will dim up and a long press on input 2 will dim down. Only Flow cards named \"Input 1\" will be triggered by the inputs. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNote 3: For the \"dimmer switch\" options, the app will trigger \"Increase/decrease relative dim-level\" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the \"When...\" part of a Homey flow and then use a \"Set relative dim-level\" card in the \"Then...\" part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%.\n\nNOTE 4: For \"Stationary switch as scene selector\", the primary scene is recalled in the \"On\" state and the secondary scene is recalled in the \"Off\" state. For \"Push button as scene selector\", the primary scene is recalled with short press and the secondary scene is recalled with long press. The inputs will not control the outputs and no Flow cards will be triggered by the inputs.\n"
+              },
+              "values": [
+                {
+                  "id": "StationarySwitchToggle",
+                  "label": {
+                    "en": "Stationary switch as toggle switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchOnOff",
+                  "label": {
+                    "en": "Stationary switch as on/off switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggle",
+                  "label": {
+                    "en": "Push button as toggle switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggleLongClickDim",
+                  "label": {
+                    "en": "Push button as dimmer switch"
+                  }
+                },
+                {
+                  "id": "DualShortClickOnOffLongClickDim",
+                  "label": {
+                    "en": "Dual push buttons as dimmer switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchSceneSelector",
+                  "label": {
+                    "en": "Stationary switch as scene selector"
+                  }
+                },
+                {
+                  "id": "MomentarySwitchSceneSelector",
+                  "label": {
+                    "en": "Push button as scene selector"
+                  }
+                },
+                {
+                  "id": "None",
+                  "label": {
+                    "en": "No actions"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "inputaction2",
+              "type": "dropdown",
+              "value": "ShortClickToggle",
+              "label": {
+                "en": "Actions input 2"
+              },
+              "hint": {
+                "en": "Select actions controlled by input 2 on the device.\n\nDepending on the actions, the input will have different impacts on the output, and different Flow cards named \"Input 2\" will be triggered.\n\nTriggers:\n\nInput 2 - Set on\n  Triggered by \"on/off switch\"\nInput 2 - Set off\n  Triggered by \"on/off switch\"\nInput 2 - Toggle on or off\n  Triggered by \"toggle switch\" and \"dimmer switch\"\nInput 2 - Increase relative dim-level\n  Triggered by \"dimmer switch\"\nInput 2 - Decrease relative dim-level\n  Triggered by \"dimmer switch\"\n\nNOTE 1: If the \"Dual push buttons as dimmer switch\" option is selected for input 1, the selection for input 2 will have no effect. No Flow cards named \"Input 2\" will be triggered. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNote 2: For the \"dimmer switch\" options, the app will trigger \"Increase/decrease relative dim-level\" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the \"When...\" part of a Homey flow and then use a \"Set relative dim-level\" card in the \"Then...\" part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%.\n\nNOTE 3: For \"Stationary switch as scene selector\", the primary scene is recalled in the \"On\" state and the secondary scene is recalled in the \"Off\" state. For \"Push button as scene selector\", the primary scene is recalled with short press and the secondary scene is recalled with long press. The inputs will not control the outputs and no Flow cards will be triggered by the inputs.\n"
+              },
+              "values": [
+                {
+                  "id": "StationarySwitchToggle",
+                  "label": {
+                    "en": "Stationary switch as toggle switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchOnOff",
+                  "label": {
+                    "en": "Stationary switch as on/off switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggle",
+                  "label": {
+                    "en": "Push button as toggle switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggleLongClickDim",
+                  "label": {
+                    "en": "Push button as dimmer switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchSceneSelector",
+                  "label": {
+                    "en": "Stationary switch as scene selector"
+                  }
+                },
+                {
+                  "id": "MomentarySwitchSceneSelector",
+                  "label": {
+                    "en": "Push button as scene selector"
+                  }
+                },
+                {
+                  "id": "None",
+                  "label": {
+                    "en": "No actions"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "group1a",
+              "type": "number",
+              "label": {
+                "en": "Primary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene1a",
+              "type": "number",
+              "label": {
+                "en": "Primary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group1b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene1b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group2a",
+              "type": "number",
+              "label": {
+                "en": "Primary Group ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene2a",
+              "type": "number",
+              "label": {
+                "en": "Primary Scene ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group2b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Group ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene2b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Scene ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            }
+          ]
+        }
+      ],
       "name": {
         "en": "S1 RAILSWITCH"
       },
@@ -277,7 +1143,9 @@
               5,
               6
             ],
-            "bindings": []
+            "bindings": [
+              6
+            ]
           },
           "2": {
             "clusters": [
@@ -307,7 +1175,9 @@
               1794,
               2820
             ],
-            "bindings": []
+            "bindings": [
+              1794
+            ]
           },
           "232": {
             "clusters": [
@@ -336,10 +1206,126 @@
           }
         }
       },
-      "settings": [],
       "id": "S1R_5501"
     },
     {
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Settings"
+          },
+          "children": [
+            {
+              "id": "inputaction1",
+              "type": "dropdown",
+              "value": "ShortClickToggle",
+              "label": {
+                "en": "Actions input 1"
+              },
+              "hint": {
+                "en": "Select actions controlled by input 1 on the device.\n\nDepending on the actions, the input will have different impacts on the output, and different Flow cards named \"Input 1\" will be triggered.\n\nTriggers:\n\nInput 1 - Set on\n  Triggered by \"on/off switch\"\nInput 1 - Set off\n  Triggered by \"on/off switch\"\nInput 1 - Toggle on or off\n  Triggered by \"toggle switch\" and \"dimmer switch\"\nInput 1 - Increase relative dim-level\n  Triggered by \"dimmer switch\"\nInput 1 - Decrease relative dim-level\n  Triggered by \"dimmer switch\"\n\nNote 3: For the \"dimmer switch\" option, the app will trigger \"Increase/decrease relative dim-level\" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the \"When...\" part of a Homey flow and then use a \"Set relative dim-level\" card in the \"Then...\" part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%.\n\nNOTE 2: For \"Stationary switch as scene selector\", the primary scene is recalled in the \"On\" state and the secondary scene is recalled in the \"Off\" state. For \"Push button as scene selector\", the primary scene is recalled with short press and the secondary scene is recalled with long press. The inputs will not control the outputs and no Flow cards will be triggered by the inputs.\n"
+              },
+              "values": [
+                {
+                  "id": "StationarySwitchToggle",
+                  "label": {
+                    "en": "Stationary switch as toggle switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchOnOff",
+                  "label": {
+                    "en": "Stationary switch as on/off switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggle",
+                  "label": {
+                    "en": "Push button as toggle switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggleLongClickDim",
+                  "label": {
+                    "en": "Push button as dimmer switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchSceneSelector",
+                  "label": {
+                    "en": "Stationary switch as scene selector"
+                  }
+                },
+                {
+                  "id": "MomentarySwitchSceneSelector",
+                  "label": {
+                    "en": "Push button as scene selector"
+                  }
+                },
+                {
+                  "id": "None",
+                  "label": {
+                    "en": "No actions"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "group1a",
+              "type": "number",
+              "label": {
+                "en": "Primary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene1a",
+              "type": "number",
+              "label": {
+                "en": "Primary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group1b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene1b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            }
+          ]
+        }
+      ],
       "name": {
         "en": "S1 POWER SWITCH"
       },
@@ -371,7 +1357,9 @@
               5,
               6
             ],
-            "bindings": []
+            "bindings": [
+              6
+            ]
           },
           "2": {
             "clusters": [
@@ -390,7 +1378,9 @@
               1794,
               2820
             ],
-            "bindings": []
+            "bindings": [
+              1794
+            ]
           },
           "232": {
             "clusters": [
@@ -419,10 +1409,239 @@
           }
         }
       },
-      "settings": [],
       "id": "S1_5501"
     },
     {
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Settings"
+          },
+          "children": [
+            {
+              "id": "inputaction1",
+              "type": "dropdown",
+              "value": "ShortClickToggle",
+              "label": {
+                "en": "Actions input 1"
+              },
+              "hint": {
+                "en": "Select actions controlled by input 1 on the device.\n\nDepending on the actions, the input will have different impacts on the output, and different Flow cards named \"Input 1\" will be triggered.\n\nTriggers:\n\nInput 1 - Set on\n  Triggered by \"on/off switch\"\nInput 1 - Set off\n  Triggered by \"on/off switch\"\nInput 1 - Toggle on or off\n  Triggered by \"toggle switch\" and \"dimmer switch\"\nInput 1 - Increase relative dim-level\n  Triggered by \"dimmer switch\"\nInput 1 - Decrease relative dim-level\n  Triggered by \"dimmer switch\"\n\nNOTE 1: For \"Push button as dimmer switch\", a short press will toggle, a long press will (alternately) dim up or down.\n\nNOTE 2: For \"Dual push buttons as dimmer switch\", a short press on input 1 will turn on, a short press on input 2 will turn off, a long press on input 1 will dim up and a long press on input 2 will dim down. Only Flow cards named \"Input 1\" will be triggered by the inputs. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNote 3: For the \"dimmer switch\" options, the app will trigger \"Increase/decrease relative dim-level\" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the \"When...\" part of a Homey flow and then use a \"Set relative dim-level\" card in the \"Then...\" part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%.\n\nNOTE 4: For \"Stationary switch as scene selector\", the primary scene is recalled in the \"On\" state and the secondary scene is recalled in the \"Off\" state. For \"Push button as scene selector\", the primary scene is recalled with short press and the secondary scene is recalled with long press. The inputs will not control the outputs and no Flow cards will be triggered by the inputs.\n"
+              },
+              "values": [
+                {
+                  "id": "StationarySwitchToggle",
+                  "label": {
+                    "en": "Stationary switch as toggle switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchOnOff",
+                  "label": {
+                    "en": "Stationary switch as on/off switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggle",
+                  "label": {
+                    "en": "Push button as toggle switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggleLongClickDim",
+                  "label": {
+                    "en": "Push button as dimmer switch"
+                  }
+                },
+                {
+                  "id": "DualShortClickOnOffLongClickDim",
+                  "label": {
+                    "en": "Dual push buttons as dimmer switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchSceneSelector",
+                  "label": {
+                    "en": "Stationary switch as scene selector"
+                  }
+                },
+                {
+                  "id": "MomentarySwitchSceneSelector",
+                  "label": {
+                    "en": "Push button as scene selector"
+                  }
+                },
+                {
+                  "id": "None",
+                  "label": {
+                    "en": "No actions"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "inputaction2",
+              "type": "dropdown",
+              "value": "ShortClickToggle",
+              "label": {
+                "en": "Actions input 2"
+              },
+              "hint": {
+                "en": "Select actions controlled by input 2 on the device.\n\nDepending on the actions, the input will have different impacts on the output, and different Flow cards named \"Input 2\" will be triggered.\n\nTriggers:\n\nInput 2 - Set on\n  Triggered by \"on/off switch\"\nInput 2 - Set off\n  Triggered by \"on/off switch\"\nInput 2 - Toggle on or off\n  Triggered by \"toggle switch\" and \"dimmer switch\"\nInput 2 - Increase relative dim-level\n  Triggered by \"dimmer switch\"\nInput 2 - Decrease relative dim-level\n  Triggered by \"dimmer switch\"\n\nNOTE 1: If the \"Dual push buttons as dimmer switch\" option is selected for input 1, the selection for input 2 will have no effect. No Flow cards named \"Input 2\" will be triggered. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNote 2: For the \"dimmer switch\" options, the app will trigger \"Increase/decrease relative dim-level\" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the \"When...\" part of a Homey flow and then use a \"Set relative dim-level\" card in the \"Then...\" part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%.\n\nNOTE 3: For \"Stationary switch as scene selector\", the primary scene is recalled in the \"On\" state and the secondary scene is recalled in the \"Off\" state. For \"Push button as scene selector\", the primary scene is recalled with short press and the secondary scene is recalled with long press. The inputs will not control the outputs and no Flow cards will be triggered by the inputs.\n"
+              },
+              "values": [
+                {
+                  "id": "StationarySwitchToggle",
+                  "label": {
+                    "en": "Stationary switch as toggle switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchOnOff",
+                  "label": {
+                    "en": "Stationary switch as on/off switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggle",
+                  "label": {
+                    "en": "Push button as toggle switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggleLongClickDim",
+                  "label": {
+                    "en": "Push button as dimmer switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchSceneSelector",
+                  "label": {
+                    "en": "Stationary switch as scene selector"
+                  }
+                },
+                {
+                  "id": "MomentarySwitchSceneSelector",
+                  "label": {
+                    "en": "Push button as scene selector"
+                  }
+                },
+                {
+                  "id": "None",
+                  "label": {
+                    "en": "No actions"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "group1a",
+              "type": "number",
+              "label": {
+                "en": "Primary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene1a",
+              "type": "number",
+              "label": {
+                "en": "Primary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group1b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene1b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group2a",
+              "type": "number",
+              "label": {
+                "en": "Primary Group ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene2a",
+              "type": "number",
+              "label": {
+                "en": "Primary Scene ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group2b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Group ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene2b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Scene ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            }
+          ]
+        }
+      ],
       "name": {
         "en": "S2 RAILSWITCH SW1"
       },
@@ -454,7 +1673,9 @@
               5,
               6
             ],
-            "bindings": []
+            "bindings": [
+              6
+            ]
           },
           "2": {
             "clusters": [
@@ -464,7 +1685,9 @@
               5,
               6
             ],
-            "bindings": []
+            "bindings": [
+              6
+            ]
           },
           "3": {
             "clusters": [
@@ -494,7 +1717,9 @@
               1794,
               2820
             ],
-            "bindings": []
+            "bindings": [
+              1794
+            ]
           },
           "232": {
             "clusters": [
@@ -529,14 +1754,244 @@
             ],
             "name": {
               "en": "S2 RAILSWITCH SW2"
-            }
+            },
+            "settings": []
           }
         }
       },
-      "settings": [],
       "id": "S2R_5502"
     },
     {
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Settings"
+          },
+          "children": [
+            {
+              "id": "inputaction1",
+              "type": "dropdown",
+              "value": "ShortClickToggle",
+              "label": {
+                "en": "Actions input 1"
+              },
+              "hint": {
+                "en": "Select actions controlled by input 1 on the device.\n\nDepending on the actions, the input will have different impacts on the output, and different Flow cards named \"Input 1\" will be triggered.\n\nTriggers:\n\nInput 1 - Set on\n  Triggered by \"on/off switch\"\nInput 1 - Set off\n  Triggered by \"on/off switch\"\nInput 1 - Toggle on or off\n  Triggered by \"toggle switch\" and \"dimmer switch\"\nInput 1 - Increase relative dim-level\n  Triggered by \"dimmer switch\"\nInput 1 - Decrease relative dim-level\n  Triggered by \"dimmer switch\"\n\nNOTE 1: For \"Push button as dimmer switch\", a short press will toggle, a long press will (alternately) dim up or down.\n\nNOTE 2: For \"Dual push buttons as dimmer switch\", a short press on input 1 will turn on, a short press on input 2 will turn off, a long press on input 1 will dim up and a long press on input 2 will dim down. Only Flow cards named \"Input 1\" will be triggered by the inputs. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNote 3: For the \"dimmer switch\" options, the app will trigger \"Increase/decrease relative dim-level\" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the \"When...\" part of a Homey flow and then use a \"Set relative dim-level\" card in the \"Then...\" part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%.\n\nNOTE 4: For \"Stationary switch as scene selector\", the primary scene is recalled in the \"On\" state and the secondary scene is recalled in the \"Off\" state. For \"Push button as scene selector\", the primary scene is recalled with short press and the secondary scene is recalled with long press. The inputs will not control the outputs and no Flow cards will be triggered by the inputs.\n"
+              },
+              "values": [
+                {
+                  "id": "StationarySwitchToggle",
+                  "label": {
+                    "en": "Stationary switch as toggle switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchOnOff",
+                  "label": {
+                    "en": "Stationary switch as on/off switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggle",
+                  "label": {
+                    "en": "Push button as toggle switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggleLongClickDim",
+                  "label": {
+                    "en": "Push button as dimmer switch"
+                  }
+                },
+                {
+                  "id": "DualShortClickOnOffLongClickDim",
+                  "label": {
+                    "en": "Dual push buttons as dimmer switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchSceneSelector",
+                  "label": {
+                    "en": "Stationary switch as scene selector"
+                  }
+                },
+                {
+                  "id": "MomentarySwitchSceneSelector",
+                  "label": {
+                    "en": "Push button as scene selector"
+                  }
+                },
+                {
+                  "id": "None",
+                  "label": {
+                    "en": "No actions"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "inputaction2",
+              "type": "dropdown",
+              "value": "ShortClickToggle",
+              "label": {
+                "en": "Actions input 2"
+              },
+              "hint": {
+                "en": "Select actions controlled by input 2 on the device.\n\nDepending on the actions, the input will have different impacts on the output, and different Flow cards named \"Input 2\" will be triggered.\n\nTriggers:\n\nInput 2 - Set on\n  Triggered by \"on/off switch\"\nInput 2 - Set off\n  Triggered by \"on/off switch\"\nInput 2 - Toggle on or off\n  Triggered by \"toggle switch\" and \"dimmer switch\"\nInput 2 - Increase relative dim-level\n  Triggered by \"dimmer switch\"\nInput 2 - Decrease relative dim-level\n  Triggered by \"dimmer switch\"\n\nNOTE 1: If the \"Dual push buttons as dimmer switch\" option is selected for input 1, the selection for input 2 will have no effect. No Flow cards named \"Input 2\" will be triggered. For devices with two outputs, output 2 will not be controlled by input 2.\n\nNote 2: For the \"dimmer switch\" options, the app will trigger \"Increase/decrease relative dim-level\" Flow cards repeatably every 800 ms as long as the push button is long pressed. The idea is to use them in the \"When...\" part of a Homey flow and then use a \"Set relative dim-level\" card in the \"Then...\" part of the flow. One flow to increase with e.g. +10%, and one flow to decrease with e.g. -10%.\n\nNOTE 3: For \"Stationary switch as scene selector\", the primary scene is recalled in the \"On\" state and the secondary scene is recalled in the \"Off\" state. For \"Push button as scene selector\", the primary scene is recalled with short press and the secondary scene is recalled with long press. The inputs will not control the outputs and no Flow cards will be triggered by the inputs.\n"
+              },
+              "values": [
+                {
+                  "id": "StationarySwitchToggle",
+                  "label": {
+                    "en": "Stationary switch as toggle switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchOnOff",
+                  "label": {
+                    "en": "Stationary switch as on/off switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggle",
+                  "label": {
+                    "en": "Push button as toggle switch"
+                  }
+                },
+                {
+                  "id": "ShortClickToggleLongClickDim",
+                  "label": {
+                    "en": "Push button as dimmer switch"
+                  }
+                },
+                {
+                  "id": "StationarySwitchSceneSelector",
+                  "label": {
+                    "en": "Stationary switch as scene selector"
+                  }
+                },
+                {
+                  "id": "MomentarySwitchSceneSelector",
+                  "label": {
+                    "en": "Push button as scene selector"
+                  }
+                },
+                {
+                  "id": "None",
+                  "label": {
+                    "en": "No actions"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "group1a",
+              "type": "number",
+              "label": {
+                "en": "Primary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene1a",
+              "type": "number",
+              "label": {
+                "en": "Primary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group1b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Group ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene1b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Scene ID input 1"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group2a",
+              "type": "number",
+              "label": {
+                "en": "Primary Group ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene2a",
+              "type": "number",
+              "label": {
+                "en": "Primary Scene ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "group2b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Group ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 65535,
+              "hint": {
+                "en": "Group ID for Input actions with Scene Selection."
+              }
+            },
+            {
+              "id": "scene2b",
+              "type": "number",
+              "label": {
+                "en": "Secondary Scene ID input 2"
+              },
+              "value": 0,
+              "min": 0,
+              "max": 255,
+              "hint": {
+                "en": "Scene ID for Input actions with Scene Selection."
+              }
+            }
+          ]
+        }
+      ],
       "name": {
         "en": "S2 POWER SWITCH SW1"
       },
@@ -568,7 +2023,9 @@
               5,
               6
             ],
-            "bindings": []
+            "bindings": [
+              6
+            ]
           },
           "2": {
             "clusters": [
@@ -578,7 +2035,9 @@
               5,
               6
             ],
-            "bindings": []
+            "bindings": [
+              6
+            ]
           },
           "3": {
             "clusters": [
@@ -608,7 +2067,9 @@
               1794,
               2820
             ],
-            "bindings": []
+            "bindings": [
+              1794
+            ]
           },
           "232": {
             "clusters": [
@@ -643,11 +2104,11 @@
             ],
             "name": {
               "en": "S2 POWER SWITCH SW2"
-            }
+            },
+            "settings": []
           }
         }
       },
-      "settings": [],
       "id": "S2_5502"
     }
   ]
