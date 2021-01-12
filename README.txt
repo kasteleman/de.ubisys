@@ -1,5 +1,3 @@
-de.ubisys
-
 Homey Zigbee driver for Ubisys devices
 
 1.0.1
